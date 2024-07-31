@@ -49,6 +49,15 @@
   background-color: #949494;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 0, 0);
+  background: #ffddc9;
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background: #ffddc9;
+}
 
 body {
   background-image: url("./back.jpg");

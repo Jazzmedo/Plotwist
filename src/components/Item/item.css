@@ -63,16 +63,16 @@
 
         span {
             display: inline-block;
-            color: rgba(255, 255, 255, 0.614);
+            color: #ffddc99d;
             font-family: "ADLaM Display", sans-serif;
             font-size: 18px;
             padding: 0 20px;
-            border-right: 1px solid rgba(255, 255, 255, 0.614);
+            border-right: 1px solid #ffddc99d;
         }
 
         span:last-child {
             border-right: none;
-            border-left: 1px solid rgba(255, 255, 255, 0.614);
+            border-left: 1px solid #ffddc99d;
         }
 
         .capitalize {
@@ -80,7 +80,7 @@
         }
 
         .rate {
-            border: 1px solid rgba(255, 255, 255, 0.614);
+            border: 1px solid #ffddc99d;
             border-radius: 50px;
             width: fit-content;
             margin: 0 20px;
@@ -98,7 +98,7 @@
     .overview {
         max-width: 450px;
         line-height: 01.2;
-        color: rgba(255, 255, 255, 0.614);
+        color: #ffddc99d;
         margin-top: 20px;
         font-family: "ADLaM Display", sans-serif;
     }
@@ -206,7 +206,7 @@
 
     .posdet .posttle {
         font-family: "ADLaM Display", sans-serif;
-        color: #ffddc9aa;
+        color: #ffddc9;
         font-size: 20px;
         padding-bottom: 10px;
         max-width: 200px;
@@ -217,7 +217,7 @@
         border-top: 2px dashed #ffddc958;
         padding-top: 10px;
         font-family: "ADLaM Display", sans-serif;
-        color: #ffddc9aa;
+        color: #ffddc9;
         font-size: 20px;
 
         span {
@@ -238,7 +238,7 @@
         height: auto;
         text-align: center;
         width: 65px;
-        background-color: #ffddc9df;
+        background-color: #ffffffdf;
         padding: 7px;
         border-radius: 10px;
         cursor: pointer;
