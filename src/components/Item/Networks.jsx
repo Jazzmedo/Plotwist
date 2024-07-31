@@ -22,7 +22,8 @@ function Networks() {
         str = str.toLowerCase()
         // Replace spaces with hyphens
         str = str.replace(/\s+/g, '-');
-        str = str.replace(":", '-');
+        str = str.replace(":", '');
+        str = str.replace(",", '');
 
         // Replace '&' with 'and'
         str = str.replace('&', 'and');
