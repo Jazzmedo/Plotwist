@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 element: <MovieSec type={"movie"} />
             },
             {
-                path: "/learning",
+                path: "/Plotwist",
                 element: <Home />
             },
             {
