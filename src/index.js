@@ -1,7 +1,6 @@
 import React from 'react';
 import Movie from "./components/Item/Movie"
 import ReactDOM from 'react-dom/client';
-import { Link } from 'react-router-dom';
 import App from './App';
 import NotFound from './components/notfound/NotFound';
 import SeasDet from './components/Season/SeasDet';
