@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+* {
+    font-family: "ADLaM Display", sans-serif;
+}
+
+*[lang="ar"] {
+    direction: rtl !important;
+    font-family: "Cairo", "sans-serif" !important;
+}
+
+.alll {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
+    margin: 40px 0 -20px;
+}
+
+.backonly {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 35px 0px 35px 120px;
+    transition: all 0.3s ease-in-out;
+}
+
+.backonly:hover {
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.259);
+    transform: scale(1.05);
+}
+
+.details {
+    padding: 20px;
+    color: #ffddc9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+
+    h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+
+    img {
+        width: 450px;
+        height: fit-content;
+    }
+
+    .extra {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+
+        span {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.614);
+            font-family: "ADLaM Display", sans-serif;
+            font-size: 18px;
+            padding: 0 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.614);
+        }
+
+        span:last-child {
+            border-right: none;
+            border-left: 1px solid rgba(255, 255, 255, 0.614);
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        .rate {
+            border: 1px solid rgba(255, 255, 255, 0.614);
+            border-radius: 50px;
+            width: fit-content;
+            margin: 0 20px;
+            padding: 0 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .rate:hover {
+            color: #000;
+            background-color: #ffddc9;
+            border: 1px solid #000;
+        }
+    }
+
+    .overview {
+        max-width: 450px;
+        line-height: 01.2;
+        color: rgba(255, 255, 255, 0.614);
+        margin-top: 20px;
+        font-family: "ADLaM Display", sans-serif;
+    }
+
+    .genress img {
+        margin-top: 3px;
+        height: 30px;
+        text-align: center;
+        width: 55px;
+        background-color: #ffddc9;
+        padding: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .genress img:hover {
+        background-color: #000;
+    }
+
+    .genress {
+        display: flex;
+
+        justify-content: center;
+        margin-top: 20px;
+        gap: 1rem;
+        align-items: flex-start;
+        color: #ffddc9;
+        transition: opacity 0.3s ease-in-out;
+        font-size: 1.5vw;
+        font-weight: 500;
+        height: fit-content;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .genress a {
+        text-decoration: none;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .genree {
+        height: fit-content;
+        width: fit-content;
+        background-color: #ffddc9;
+        backdrop-filter: blur(10px);
+        color: rgb(0, 0, 0);
+        padding: 8px;
+        border-radius: 50px;
+        font-family: "ADLaM Display", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .genree:hover {
+        color: #ffddc9;
+        background-color: #000;
+        /* border: 1px solid #fff; */
+    }
+
+}
+
+.allpos:hover {
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.259);
+    transform: scale(1.05);
+}
+
+.allpos {
+    margin: 20px 120px 40px 30px;
+    width: fit-content;
+    /* max-width: 30%; */
+    padding: 20px;
+    background: linear-gradient(215deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease-in-out;
+
+    .flexmode {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.7rem;
+    }
+
+    .watchnow {
+        margin-top: 15px;
+        border: 1px solid #ffddc958;
+        border-width: 2px 0 0 0;
+        padding-top: 10px;
+        font-family: "ADLaM Display", sans-serif;
+        color: #ffddc9e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    .posdet .posttle {
+        font-family: "ADLaM Display", sans-serif;
+        color: #ffddc9aa;
+        font-size: 20px;
+        padding-bottom: 10px;
+        max-width: 200px;
+        text-wrap: wrap;
+    }
+
+    .vote {
+        border-top: 2px dashed #ffddc958;
+        padding-top: 10px;
+        font-family: "ADLaM Display", sans-serif;
+        color: #ffddc9aa;
+        font-size: 20px;
+
+        span {
+            color: #ffddc97a;
+            font-size: 16px;
+        }
+    }
+
+    .posterr {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+
+    .netw {
+        margin-top: 3px;
+        height: auto;
+        text-align: center;
+        width: 65px;
+        background-color: #ffddc9df;
+        padding: 7px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+}
+
+.flexonlyy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.fgsdasd{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+}
+
+.flexonlyys {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.allcast {
+    background: rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 4rem;
+
+    .casth {
+        text-align: center;
+        font-family: "ADLaM Display", sans-serif;
+        color: #ffddc9ea;
+        font-size: 40px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+    }
+
+    .allcasting {
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 0 2rem;
+        display: flex;
+
+        a {
+            text-decoration: none;
+        }
+
+
+    }
+
+    .castcont:hover {
+        transform: scale(1.05);
+
+        img,
+        .castname {
+            filter: brightness(1);
+        }
+
+        img:hover {
+            box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.266);
+        }
+
+        .votinggg.force {
+            background-color: #006671;
+            color: #ffddc9;
+            opacity: 1;
+        }
+    }
+
+    .castcont {
+        transition: all 0.3s ease-in-out;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: fit-content;
+        flex-wrap: wrap;
+
+        img {
+            width: 100px;
+            border-radius: 20px;
+            height: auto;
+            background-position: center;
+            background-size: cover;
+            background-color: rgb(255 255 255 / 10%);
+            filter: brightness(0.6) blur(0.5px);
+            transition: filter 0.3s ease-in-out;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        h4 {
+            font-family: "ADLaM Display", sans-serif;
+            font-size: 16px;
+        }
+
+
+        .castname {
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 10px;
+            transition: filter 0.3s ease-in-out;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-wrap: balance;
+            max-width: 100px;
+            color: #ffddc9d5;
+            filter: brightness(0.6);
+            text-align: center;
+            align-self: center;
+        }
+
+        .castchar {
+            max-width: 100px;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 10px;
+            font-weight: 600;
+            overflow: hidden;
+            text-align: start;
+            text-wrap: wrap;
+            color: #ffddc977;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            margin: 0;
+            max-height: 18px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            align-self: center;
+        }
+
+        .castchar:hover {
+            color: #ffddc9;
+            max-height: 100px;
+        }
+    }
+
+    .castcont:hover {
+
+        img,
+        .castname {
+            filter: brightness(1);
+        }
+    }
+
+    .crew {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+.crew.must.obey {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.allcast .flexing{
+    display: flex;
+}
+
+.seasons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    gap: 2.5rem;
+
+    img {
+        width: 100px;
+        border-radius: 30px;
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        background-color: rgb(255 255 255 / 10%);
+    }
+
+    h4 {
+        font-family: "ADLaM Display", sans-serif;
+        font-size: 16px;
+    }
+
+    .castname {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 10px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: balance;
+        max-width: 100px;
+        color: #ffddc9d5;
+
+
+    }
+
+    .castname:hover {
+        cursor: pointer;
+    }
+
+    .seas a {
+        text-decoration: none;
+    }
+}
+
+.widtho {
+    width: 100%;
+}
+
+.oneseason {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+#seas {
+    gap: 0;
+    flex-direction: column;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .details img, .overview, .genress img {
+        width: 100%; /* Adjust image width for smaller screens */
+        height: auto;
+    }
+
+    .details, .allpos, .backonly {
+        margin: 20px; /* Reduce margin */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .details .extra span, .details .rate {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .genress, .allcast, .seasons {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+    .details img, .overview, .genress img {
+        width: 100%; /* Ensure images take full width */
+    }
+
+    .details, .allpos, .backonly {
+        margin: 10px; /* Further reduce margin */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .details .extra span, .details .rate {
+        font-size: 14px; /* Reduce font size for readability */
+    }
+
+    .genress, .allcast, .seasons {
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;
+    }
+
+    .details h2, .casth, .watchnow {
+        font-size: 18px; /* Adjust heading sizes for better readability */
+    }
+}

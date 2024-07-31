@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.seasondet {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.allseas {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
+    margin: 2rem 0 0 0;
+}
+
+.seasonpos {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0 1.5rem 3rem;
+    max-width: 250px;
+}
+
+.posterrseas {
+    width: fit-content;
+    position: relative;
+    height: auto;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    img {
+        width: 250px;
+        height: auto;
+        border-radius: 30px;
+    }
+}
+
+.posterrseas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 0px #ffddc980;
+
+    .votinggg.force {
+        background-color: #006671;
+        color: #ffddc9;
+    }
+}
+
+.seasposttle {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.seasposttle:hover {
+    color: rgb(255, 255, 255);
+}
+
+.voteseas {
+    font-size: 1.2rem;
+    color: #ffddc99d;
+    transition: all 0.3s ease-in-out;
+    /* margin-top: 5px; */
+}
+
+.voteseas:hover {
+    color: #ffddc9;
+}
+
+.seasvote {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    color: #ffddc99d;
+}
+
+.posseas {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.seasname {
+    color: #ffddc99d;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.3rem;
+}
+
+.seasname:hover {
+    color: #ffddc9;
+}
+
+.watchnoww {
+    border: 1px solid #ffddc958;
+    border-width: 2px 0 0 0;
+    padding-top: 10px;
+    font-family: "ADLaM Display", sans-serif;
+    color: #ffddc9e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.netw {
+    margin-top: 3px;
+    height: auto;
+    text-align: center;
+    width: 65px;
+    background-color: #ffffffdf;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sep {
+    background-color: #ffddc958;
+    width: 3px;
+    height: 400px;
+    margin-top: 1.3rem;
+}
+
+.episodess {
+    width: calc(100% - 3px - 3rem - 250px);
+}
+
+.epish2 {
+    color: #ffddc9e8;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+
+}
+
+.cardsss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.oncardd {
+    width: 29%;
+    max-width: 29%;
+    height: 220px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.posterrr {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.numberep {
+    position: absolute;
+    width: auto;
+    height: 2.5rem;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    background-color: #000000a5;
+    border: 1.5px solid #ffddc9;
+    border-radius: 100px;
+    color: #ffddc9;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.9rem;
+}
+
+.voteep {
+    position: absolute;
+    width: auto;
+    height: 2.5rem;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+    background-color: #006671cc;
+    border: 1.5px solid #ffddc9;
+    border-radius: 100px;
+    color: #ffddc9;
+    font-size: 0.9rem;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.9rem;
+}
+
+.episdets {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 30%;
+    color: #ffddc9c4;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+
+    h5 {
+        text-wrap: wrap;
+        max-width: 55%;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.septer {
+    width: 2px;
+    height: 70%;
+    margin: 2rem 1rem;
+    background-color: #ffddc98b;
+    transition: all 0.3s ease-in-out;
+}
+
+#epnammma {
+    font-size: 1.05rem;
+}
+
+.detsdets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    transition: all 0.3s ease-in-out;
+    gap: 0.25rem;
+
+    * {
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.oncardd:hover {
+    transform: scale(1.05);
+
+    .septer {
+        background-color: #ffddc9;
+    }
+
+    .detsdets {
+        h6 {
+            color: #ffddc9;
+        }
+    }
+
+    .voteep {
+        background-color: #006671;
+    }
+
+    .numberep {
+        background-color: #000;
+    }
+
+    .episdets {
+        background-color: rgba(0, 0, 0, 0.7);
+
+        h5 {
+            color: #ffddc9;
+        }
+    }
+}
+
+.widthoo {
+    width: 100%;
+}
+
+.casthh {
+    margin: 3rem auto 0;
+}
+
+.allcastingg {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 2rem ;
+    padding-bottom: 4rem;
+
+    a {
+        text-decoration: none;
+    }
+
+
+}
+
+.castcontt:hover {
+
+    img,
+    .castnamee {
+        filter: brightness(1);
+    }
+
+    img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px 0px #ffddc944;
+    }
+}
+
+.castcontt {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: fit-content;
+    flex-wrap: wrap;
+
+    img {
+        width: 100px;
+        border-radius: 20px;
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        background-color: rgb(255 255 255 / 10%);
+        filter: brightness(0.6) blur(0.5px);
+        transition: filter 0.3s ease-in-out;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    h4 {
+        font-family: "ADLaM Display", sans-serif;
+        font-size: 16px;
+    }
+
+
+    .castnamee {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 10px;
+        transition: filter 0.3s ease-in-out;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: balance;
+        max-width: 100px;
+        color: #ffddc9;
+        filter: brightness(0.6);
+        text-align: center;
+        align-self: center;
+    }
+
+    .castcharr {
+        max-width: 100px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 10px;
+        font-weight: 600;
+        overflow: hidden;
+        text-align: start;
+        text-wrap: wrap;
+        color: #ffddc977;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        margin: 0;
+        max-height: 18px;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        align-self: center;
+    }
+
+    .castcharr:hover {
+        color: #ffddc9;
+        max-height: 100px;
+    }
+}
+
+.castcontt:hover {
+
+    img,
+    .castnamee {
+        filter: brightness(1);
+    }
+}

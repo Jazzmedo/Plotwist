@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mina:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+* {
+    font-family: "ADLaM Display", "sans-serif";
+    cursor: default;
+}
+
+
+.search-bar {
+    position: relative;
+    margin-right: 50px;
+    display: flex;
+    width: 70%;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+
+    * {
+        font-family: "ADLaM Display", "sans-serif";
+    }
+}
+
+#searchInput {
+    width: 400px;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    background-color: #00000094;
+    color: #ffddc9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    border: 1px solid #ffffff3b;
+    padding-left: 15px;
+}
+
+#searchInput::placeholder {
+    color: #ffddc9;
+    
+}
+
+#searchInput:focus {
+    border: 1px solid #ffffff58;
+    background-color: #18181894;
+    outline: none !important;
+}
+
+#searchInput:hover {
+    outline: none !important;
+}
+
+.dropdown-menu {
+    padding: 0;
+    position: absolute;
+    width: 400px;
+    background-color: #18181894;
+    border: none;
+    top: 42px;
+    display: none;
+    /* Initially hidden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+}
+
+.dropdown-item {
+    background-color: #18181894;
+    transition: all 0.2s ease-in;
+    display: block;
+    padding: 4px;
+    font-size: 14px;
+    color: #ffddc99b;
+    text-decoration: none;
+    border-bottom: 1px solid #484e5c;
+    transition: background-color 0.2s;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    .typee {
+        transition: all 0.3s ease-in-out;
+        text-transform: capitalize;
+        color: #ffddc99b;
+    }
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.dropdown-item:hover {
+    color: #000;
+
+    .typee {
+        color: #272727;
+    }
+}

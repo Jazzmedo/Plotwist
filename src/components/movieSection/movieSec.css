@@ -1,0 +1,16 @@
+.moviesecc{
+    width: 100%;
+    padding-bottom: 1rem;
+    margin-top: 40px;
+
+    .trendssss.trendsss{
+        color: #ffddc9;
+    }
+}
+.topratedd{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+}
