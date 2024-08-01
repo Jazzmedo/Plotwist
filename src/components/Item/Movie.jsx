@@ -39,6 +39,7 @@ function Movie() {
         }
         // console.log(cast)
         // console.log(details.genres)
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
     }, [type, id, imdb, isLoading])
 
     function getLogo() {
@@ -61,6 +62,7 @@ function Movie() {
 
     document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
     document.title = `Plotwist | ${details.title || details.name}`;
+
     return (
         <>
             <Loading isLoading={isLoading} />

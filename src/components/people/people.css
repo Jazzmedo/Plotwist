@@ -8,8 +8,8 @@
 }
 
 .peopleAll {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50); */
     width: 100%;
     padding-bottom: 1rem;
 }

@@ -28,8 +28,8 @@ function SeasCast() {
 
     return (
         <>
-            <Separator />
             <div className='widthoo'>
+            <Separator />
                 {cast.cast && cast.cast.length > 0 ? (
                     <>
                         <h1 className='trendssss trendsss'>Cast</h1>

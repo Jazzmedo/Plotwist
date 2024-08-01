@@ -32,6 +32,7 @@ function SeasDet() {
             setLength(episodes.episodes.length)
         }
         document.body.style.cssText = `background-image:url(https://image.tmdb.org/t/p/original/${back.backdrop_path})`
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);

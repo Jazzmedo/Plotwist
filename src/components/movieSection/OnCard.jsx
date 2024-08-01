@@ -6,7 +6,6 @@ function OnCard(ele) {
     useEffect(() => {
     }, [ele])
 
-    console.log(ele.type)
     return (
         <>
             <div className="topratedd">

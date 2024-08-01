@@ -23,6 +23,7 @@ function Home() {
             })
         })
         getTodos()
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.5);margin-top: 80px;"
     }, [])
 
     function shuffle(array) {
@@ -72,7 +73,6 @@ function Home() {
                     <NowPlaying data={movie} type="movie" query="now_playing" />
                     <Separator />
                     <NowPlaying data={tv} type="tv" query="on_the_air" />
-                    <Separator />
                 </HomeContext.Provider>
             </>}
         </>

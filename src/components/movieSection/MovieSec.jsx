@@ -19,6 +19,7 @@ function MovieSec(type) {
                 setIsLoading(false)
             }, 1000);
         }
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.5);margin-top: 80px;"
     }, [movies, popular, upcoming, isLoading, type])
 
     function getMovies() {
@@ -47,18 +48,18 @@ function MovieSec(type) {
                     <Separator />
                     <h1 className='trendsss trendssss'>Popular Now</h1>
                     <OnCard type={type.type} movies={popular} />
-                    <Separator />
                     {type.type === "movie" ?
                         <>
+                            <Separator />
                             <h1 className='trendsss trendssss'>Upcoming</h1>
                             <OnCard type={type.type} movies={upcoming} />
                         </> :
                         <></>
                     }
                 </div>
-                </>}
-            </>
+            </>}
+        </>
     )
 }
 
-            export default MovieSec
+export default MovieSec

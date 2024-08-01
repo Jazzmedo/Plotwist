@@ -12,6 +12,7 @@ import './components/navbar/navbar.css';
 import './components/people/people.css';
 import './components/Episode/epi.css';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 export default class App extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class App extends Component {
       <>
         <Navbar />
         <Outlet />
+        <Footer />
       </>
     )
   }

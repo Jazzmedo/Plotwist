@@ -15,6 +15,8 @@ function People() {
         document.getElementById("Nv").scrollIntoView({ behavior: "smooth" });
 
         getPeople();
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.5);margin-top: 80px;"
+
     }, [pid, isLoading]);
 
     function getPeople() {
