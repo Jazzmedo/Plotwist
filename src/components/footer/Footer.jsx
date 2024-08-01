@@ -2,6 +2,9 @@ import React from 'react'
 import './footer.css'
 import Separator from '../Home/Separator'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub} from '@fortawesome/free-brands-svg-icons';
+
 
 
 function Footer() {
@@ -34,25 +37,13 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="foot3">
-                    <h3>&lt; Developed By &gt;</h3>
+                    <h3>&lt; Developed By /&gt;</h3>
                     <div className="social">
-                        <a href="">
+                        <a href="https://github.com/Jazzmedo" target='_blank'>
                             {" "}
-                            <i className="fa-brands fa-facebook" />
+                            <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <a href="x.com">
-                            {" "}
-                            <i className="fa-brands fa-x-twitter" />
-                        </a>
-                        <a href="">
-                            {" "}
-                            <i className="fa-brands fa-linkedin-in" />
-                        </a>
-                        <a href="">
-                            {" "}
-                            <i className="fa-brands fa-instagram" />
-                        </a>
-                    </div>
+                        <h5>JazzMedo ❤</h5>                    </div>
                 </div>
             </div>
         </footer>
