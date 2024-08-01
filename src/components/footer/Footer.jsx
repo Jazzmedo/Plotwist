@@ -3,7 +3,7 @@ import './footer.css'
 import Separator from '../Home/Separator'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -43,7 +43,8 @@ function Footer() {
                             {" "}
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <h5>JazzMedo ❤</h5>                    </div>
+                        <h5>JazzMedo ❤</h5>
+                    </div>
                 </div>
             </div>
         </footer>
