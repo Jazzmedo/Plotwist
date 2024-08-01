@@ -51,7 +51,7 @@ function MovieSec(type) {
                     {type.type === "movie" ?
                         <>
                             <h1 className='trendsss trendssss'>Upcoming</h1>
-                            <OnCard movies={upcoming} />
+                            <OnCard type={type.type} movies={upcoming} />
                         </> :
                         <></>
                     }

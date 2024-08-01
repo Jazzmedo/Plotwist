@@ -201,139 +201,98 @@
 .cardssss {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 3.5rem;
-    margin-top: 2rem;
-    position: relative;
+    gap: 40px;
 }
 
 .oncarddd {
-    width: 20%;
-    max-width: 29%;
-    height: 192px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    border-radius: 0px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+}
+
+.oncarddd:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 3px #00000082;
 }
 
 .posterrrr {
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
     width: 100%;
     height: auto;
-    position: absolute;
-    filter: blur(0.5px);
-    transition: all 0.3s ease-in-out;
-    top: 0;
-    left: 0;
-}
-
-.numberep {
-    position: absolute;
-    width: auto;
-    height: 2.5rem;
-    top: -10px;
-    left: -10px;
-    z-index: 10;
-    transition: all 0.3s ease-in-out;
-    background-color: #000000a5;
-    border: 1.5px solid #ffddc9;
-    border-radius: 100px;
-    color: #ffddc9;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0.9rem;
+    object-fit: cover;
 }
 
 .numberepp {
     position: absolute;
     width: 70px;
+    bottom: 10px;
     height: auto;
-    bottom: 30px;
-    left: 15px;
-    z-index: 10;
-    transition: all 0.3s ease-in-out;
     border-radius: 10px;
-    color: #ffddc9;
-    font-size: 1.1rem;
-    filter: brightness(0.8);
-    box-shadow: 0 0 0px 0px #00000082;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease-in-out;
 }
 
 .voteepp {
     position: absolute;
-    width: 2.5rem;
-    height: 2.5rem;
-    top: -10px;
-    right: -10px;
-    z-index: 10;
-    background-color: #006671cc;
-    border: 1.5px solid #ffddc9;
-    border-radius: 100px;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #ffddc9;
-    font-size: 0.8rem;
-    display: flex;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
     transition: all 0.3s ease-in-out;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0.9rem;
 }
 
 .episdetss {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    z-index: 1;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 35%;
-    color: #ffddc9c4;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 10px;
+    color: white;
+    text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    gap: 20px;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    padding: 0 1rem;
-    transition: all 0.3s ease-in-out;
-
-    h5 {
-        text-wrap: wrap;
-        max-width: 55%;
-        transition: all 0.3s ease-in-out;
-    }
-}
-
-.septer {
-    width: 2px;
-    height: 70%;
-    margin: 2rem 1rem;
-    background-color: #ffddc98b;
     transition: all 0.3s ease-in-out;
 }
-
-.epnammma.fsdads {
-    width: 65px;
-    height: auto;
-    min-width: 65px;
-}
-
-#epnammmaa {
-    font-size: 1.05rem;
-    z-index: 10;
+.septerr{
+    width: 1px;
+    align-self: center;
+    height: 50px;
+    background-color: hwb(21 78% 0% / 0.7);
+    transition: all 0.3s ease-in-out;
 }
 
 .nameeeee {
-    font-size: 0.9rem;
-    color: #ffddc9c4;
+    font-size: 13px;
+    font-weight: bold;
+    max-width: 160px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 1.4;
+    color: rgba(255, 221, 201, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .oncarddd {
+        width: 100%;
+    }
 }
 
 .detsdetss {
