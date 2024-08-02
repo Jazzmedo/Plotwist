@@ -356,9 +356,6 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) { /* Tablets and below */
-    .boxedd {
-        flex-direction: column;
-    }
 
     .conn {
         height: auto; /* Adjust height for smaller screens */

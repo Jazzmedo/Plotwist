@@ -22,8 +22,8 @@ function Genres() {
                 {genre.map(te => {
                     return <div key={te.id} className="genree">{te.name}</div>
                 })}
-                <a target='_blank' href={`https://www.themoviedb.org/${type}/${id}`}><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
-                <a target='_blank' href={`https://www.imdb.com/title/${imdb}`}><img src="https://imgur.com/b1d2LOV.png" alt="" /></a>
+                <a target='_blank' href={`https://www.themoviedb.org/${type}/${id}`}><img className='whitee' src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
+                <a target='_blank' href={`https://www.imdb.com/title/${imdb}`}><img className='whitee' src="https://imgur.com/b1d2LOV.png" alt="" /></a>
             </div>
         </>
     )
