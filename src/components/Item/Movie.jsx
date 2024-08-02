@@ -59,8 +59,13 @@ function Movie() {
 
     }
     // console.log(details)
+    if (details.backdrop_path) {
+        document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
+    }
 
-    document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${details.backdrop_path}')`
+
+
+    console.log(details.backdrop_path)
     document.title = `Plotwist | ${details.title || details.name}`;
 
     return (

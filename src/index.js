@@ -2,6 +2,7 @@ import React from 'react';
 import Movie from "./components/Item/Movie"
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { Link } from 'react-router-dom';
 import NotFound from './components/notfound/NotFound';
 import SeasDet from './components/Season/SeasDet';
 import SingleE from './components/Episode/SingleE';
@@ -13,43 +14,49 @@ import MovieSec from './components/movieSection/MovieSec';
 
 const router = createBrowserRouter([
     {
-        path: "",
+        path: "/",
         element: <App />,
         children: [
             {
-                path: "/:type/:id",
+                path: "/",
+                element: <Home />
+            }
+        ]
+    },
+    {
+        path: "/Plotwist",
+        element: <App />,
+        children: [
+            {
+                path: "/Plotwist/:type/:id",
                 element: <Movie />
             },
             {
-                path: "/Movies",
+                path: "/Plotwist/Movies",
                 element: <MovieSec type={"movie"} />
             },
             {
-                path: "/Plotwist",
+                path: "/Plotwist/",
                 element: <Home />
             },
             {
-                path: "/TV",
+                path: "/Plotwist/TV",
                 element: <MovieSec type={"tv"} />
             },
             {
-                path: "/tv/:id/season/:sid",
+                path: "/Plotwist/tv/:id/season/:sid",
                 element: <SeasDet />
             },
             {
-                path: "/tv/:id/season/:sid/episode/:eid",
+                path: "/Plotwist/tv/:id/season/:sid/episode/:eid",
                 element: <SingleE />
             },
             {
-                path: "",
-                element: <Home />
-            },
-            {
-                path: "/person/:pid",
+                path: "/Plotwist/person/:pid",
                 element: <People />
             },
             {
-                path: "/*",
+                path: "/Plotwist/*",
                 element: <NotFound />
             },
         ],

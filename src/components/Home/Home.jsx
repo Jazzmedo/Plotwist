@@ -53,7 +53,9 @@ function Home() {
             setMovie(res.data.results.slice(0, 8))
         })
         axios.get(`https://api.themoviedb.org/3/tv/on_the_air?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            setTv(res.data.results.slice(0, 8))
+            setTv(res.data.results.filter(item =>
+                ![10767, 10763, 10764, 10768, 10766].some(id => item.genre_ids.includes(id))
+            ).slice(0, 12))
         })
         setTimeout(() => {
             setIsLoading(false)

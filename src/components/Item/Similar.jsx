@@ -41,7 +41,7 @@ function Similar() {
                                 seas.poster_path !== null ?
                                     <div key={seas.id} className='castcont crew must obey seas'>
                                         <div className="votinggg force another">{parseInt(seas.vote_average * 10)}%</div>
-                                        <Link to={`/${type}/${seas.id}/`}>
+                                        <Link to={`/Plotwist/${type}/${seas.id}/`}>
                                             <img src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
                                             <h4 className='castname'>{seas.original_title || seas.original_name}</h4>
                                         </Link>

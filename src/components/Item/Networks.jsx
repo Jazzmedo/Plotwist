@@ -41,7 +41,7 @@ function Networks() {
         }
     }
 
-    console.log(data)
+    // console.log(data)
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
             <div className="flexonlyy" style={{ "gap": "1rem" }}>

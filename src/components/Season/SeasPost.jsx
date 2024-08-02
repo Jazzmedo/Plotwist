@@ -34,7 +34,7 @@ function SeasPost() {
                     <img src={episodes.poster_path ? `https://image.tmdb.org/t/p/w500/${episodes.poster_path}` : `https://image.tmdb.org/t/p/w500/${back.poster_path}`} alt="" />
                 </div>
                 <div className="posseas">
-                    <Link className='preventt' to={`/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
+                    <Link className='preventt' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                     <div className="seasvote">
                         <h3 className='seasname'>{episodes.name}</h3>
                     </div>

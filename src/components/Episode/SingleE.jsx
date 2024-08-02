@@ -70,7 +70,7 @@ function SingleE() {
                         <h1 className='trendsss trendssss'>Cast</h1>
                         <div className="allcastingg">
                             {episodes.guest_stars ? episodes.guest_stars.slice(0, 10).map((ele) => {
-                                return <Link key={ele.id} to={`/person/${ele.id}`}>
+                                return <Link key={ele.id} to={`/Plotwist/person/${ele.id}`}>
                                     <div key={ele.id} className='castcontt'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
                                         <h4 className='castnamee'>{ele.name}</h4>
                                         <h4 className='castcharr'>{ele.character}</h4>

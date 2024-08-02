@@ -62,7 +62,7 @@ function KnownFor(people) {
             <h1 className='trendsss trendssss'>Known For</h1>
             <div className="allmov">
                 {credits ? credits.map((credit) => (
-                    <Link key={credit.id} to={`/${credit.media_type}/${credit.id}`}>
+                    <Link key={credit.id} to={`/Plotwist/${credit.media_type}/${credit.id}`}>
                         {/* {console.log(credit)} */}
                         <div key={credit.id} className='movcont'>
                             <div className="votinggg force another">{parseInt(credit.vote_average * 10)}%</div>

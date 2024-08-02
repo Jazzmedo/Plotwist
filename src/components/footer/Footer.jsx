@@ -20,13 +20,13 @@ function Footer() {
                     <h3>COMPANY</h3>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/Plotwist">Home</Link>
                         </li>
                         <li>
-                            <Link to="/movies">Movies</Link>
+                            <Link to="/Plotwist/Movies">Movies</Link>
                         </li>
                         <li>
-                            <Link to="/tv">TV Shows</Link>
+                            <Link to="/Plotwist/TV">TV Shows</Link>
                         </li>
                     </ul>
                 </div>

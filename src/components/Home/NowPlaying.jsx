@@ -16,7 +16,7 @@ function NowPlaying(ele) {
             <h1 className='trendsss trendssss'>{ele.query == "on_the_air" ? "Airing Now TV Shows" : "Now Playing Movies"}</h1>
             <div className="cardssss">
                 {ele.data.map(item => (
-                    <Link className="oncarddd" to={`/${ele.type}/${item.id}`}>
+                    <Link className="oncarddd" to={`/Plotwist/${ele.type}/${item.id}`}>
                         <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : require(`../Season/asdfs.jpg`)} alt={item.name || item.title} />
                         <div className="voteepp">{parseInt(item.vote_average * 10)}%</div>
                         <div className="episdetss">

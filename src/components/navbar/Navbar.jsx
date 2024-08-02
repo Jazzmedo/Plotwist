@@ -68,16 +68,16 @@ function Navbar() {
     return (
         <>
             <nav id="Nv" className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link className="navbar-brand preventt" to=""><img src={require("../../logo/wlogo.png")} height="30" /></Link>
+                <Link className="navbar-brand preventt" to="/Plotwist"><img src={require("../../logo/wlogo.png")} height="30" /></Link>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item preventt">
-                        <Link className="nav-link" to="">Home</Link>
+                        <Link className="nav-link" to="/Plotwist">Home</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link " to="/Movies">Movies</Link>
+                        <Link className="nav-link " to="/Plotwist/Movies">Movies</Link>
                     </li>
                     <li className="nav-item preventt">
-                        <Link className="nav-link " to="/TV">TV Shows</Link>
+                        <Link className="nav-link " to="/Plotwist/TV">TV Shows</Link>
                     </li>
                 </ul>
                 <div className="search-bar">
@@ -86,7 +86,7 @@ function Navbar() {
                         {results.length > 0 ? results.map(item =>
                             item ? (
                                 <>
-                                    <Link key={item.id} to={`/${item.media_type}/${item.id}`} className="dropdown-item">
+                                    <Link key={item.id} to={`/Plotwist/${item.media_type}/${item.id}`} className="dropdown-item">
                                         <span className='typee'>
                                             {item.media_type === 'person' ? <FontAwesomeIcon icon={faUser} /> :
                                                 item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :

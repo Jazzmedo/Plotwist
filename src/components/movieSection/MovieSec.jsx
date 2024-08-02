@@ -27,7 +27,9 @@ function MovieSec(type) {
             setMovies(res.data.results.slice(0, 12))
         })
         axios.get(`https://api.themoviedb.org/3/${type.type}/popular?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
-            setPopular(res.data.results.slice(0, 12))
+            setPopular(res.data.results.filter(item => 
+                ![10767, 10763, 10764, 10768, 10766].some(id => item.genre_ids.includes(id))
+            ).slice(0, 12))
         })
         if (type.type === "movie") {
             axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
@@ -47,12 +49,14 @@ function MovieSec(type) {
                     <OnCard type={type.type} movies={movies} />
                     <Separator />
                     <h1 className='trendsss trendssss'>Popular Now</h1>
+                    {/* {console.log(popular)} */}
                     <OnCard type={type.type} movies={popular} />
                     {type.type === "movie" ?
                         <>
                             <Separator />
                             <h1 className='trendsss trendssss'>Upcoming</h1>
                             <OnCard type={type.type} movies={upcoming} />
+
                         </> :
                         <></>
                     }

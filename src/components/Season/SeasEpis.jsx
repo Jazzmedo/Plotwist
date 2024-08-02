@@ -15,7 +15,7 @@ function SeasEpis() {
                         // console.log(item)
                         return (<>
 
-                            <Link className="oncardd" to={`/tv/${id}/season/${sid}/episode/${item.episode_number}`}>
+                            <Link className="oncardd" to={`/Plotwist/tv/${id}/season/${sid}/episode/${item.episode_number}`}>
                                 <div key={item.id} >
                                     <img className="posterrr" src={item.still_path ? `https://image.tmdb.org/t/p/w500/${item.still_path}` : require(`./asdfs.jpg`)} />
                                     <div className="numberep">{item.episode_number}</div>
