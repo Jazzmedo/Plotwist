@@ -49,12 +49,11 @@ function SeasDet() {
             setBack(ress.data)
         })
         axios.get(`https://api.themoviedb.org/3/tv/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "en");
+            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
+                res.data.logos.find(element => element.iso_639_1 === episodes.original_language) ||
+                res.data.logos[0];
             if (firstLogo) {
                 setLogo(firstLogo.file_path);
-            }
-            else {
-                setLogo(res.data.logos[0].file_path)
             }
         });
     }

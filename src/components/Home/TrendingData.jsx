@@ -12,17 +12,19 @@ function TrendingData({ ele, genre }) {
 
     function getTodos() {
         axios.get(`https://api.themoviedb.org/3/${ele.media_type}/${ele.id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "en");
+            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
+                res.data.logos.find(element => element.iso_639_1 === ele.original_language) ||
+                res.data.logos[0];
             if (firstLogo) {
                 setLogo(firstLogo.file_path);
             }
         });
-        axios.get(`https://api.themoviedb.org/3/${ele.media_type}/${ele.id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "en");
-            if (firstLogo) {
-                setLogo(firstLogo.file_path);
-            }
-        });
+        // axios.get(`https://api.themoviedb.org/3/${ele.media_type}/${ele.id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
+        //     const firstLogo = res.data.logos.find(element => element.iso_639_1 === "en");
+        //     if (firstLogo) {
+        //         setLogo(firstLogo.file_path);
+        //     }
+        // });
     }
 
     const backgroundStyle = {
