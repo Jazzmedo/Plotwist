@@ -14,6 +14,8 @@ function SingleE() {
     let [episodes, setEpisodes] = useState([])
     let [tv, setTv] = useState([])
     const [isLoading, setIsLoading] = useState(true);
+    let [logo, setLogo] = useState("")
+
 
 
 
@@ -29,6 +31,16 @@ function SingleE() {
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(response => {
             setTv(response.data)
         })
+        axios.get(`https://api.themoviedb.org/3/tv/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
+            console.log(res.data.logos)
+            const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
+                res.data.logos.find(element => element.iso_639_1 === tv.original_language) ||
+                res.data.logos[0];
+            if (firstLogo) {
+                setLogo(firstLogo.file_path);
+            }
+        });
+
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);
@@ -45,10 +57,11 @@ function SingleE() {
                         <div className="epidet">
                             <div className="epiposter">
                                 <div className="conss">
-                                    <img src={`https://image.tmdb.org/t/p/w500/${episodes.still_path}`} alt="" />
+                                    <img className='epiimg' src={`https://image.tmdb.org/t/p/w500/${episodes.still_path}`} alt="" />
                                     <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>
                                 </div>
-                                <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '3rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
+                                <Link className='logogga' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
+                                <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '0rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
                                 <div className="flexonlyy">
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
                                         <img className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
