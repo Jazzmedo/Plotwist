@@ -35,6 +35,7 @@ function SingleE() {
             console.log(res.data.logos)
             const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
                 res.data.logos.find(element => element.iso_639_1 === tv.original_language) ||
+                res.data.logos.find(element => element.iso_639_1 === "en") ||
                 res.data.logos[0];
             if (firstLogo) {
                 setLogo(firstLogo.file_path);
