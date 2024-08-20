@@ -54,7 +54,7 @@ function Navbar() {
             .then(res => {
                 // console.log('API Response:', res.data); // Log the API response
                 if (res.data && res.data.results) {
-                    setResults(res.data.results.sort((a, b) => b.popularity * b.vote_count - a.popularity * a.vote_count).slice(0, 8));
+                    setResults(res.data.results.slice(0, 8));
                 } else {
                     setResults([]);
                 }
@@ -91,7 +91,7 @@ function Navbar() {
                                             {item.media_type === 'person' ? <FontAwesomeIcon icon={faUser} /> :
                                                 item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :
                                                     <FontAwesomeIcon icon={faFilm} />}
-                                        </span> : {item.original_title || item.original_name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
+                                        </span> : {item.title || item.name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
                                     </Link>
                                 </>
                             ) : <></>) : <div>No results found</div>}

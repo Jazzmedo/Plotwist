@@ -263,6 +263,10 @@
     display: inline-block;
 }
 
+.nyaa{
+    background-image: url('https://i.imgur.com/0gVdwjP.png') ;
+}
+
 .flexonlyys {
     display: flex;
     align-items: flex-start;
@@ -285,7 +289,7 @@
     align-items: flex-start;
     justify-content: space-around;
     gap: 2rem;
-    /* padding-bottom: 4rem; */
+    padding-bottom: 4rem;
     margin-top: 4rem;
 
     .casth {

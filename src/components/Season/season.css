@@ -176,22 +176,6 @@
     border-radius: 10px;
 }
 
-.numberep {
-    position: absolute;
-    width: 70px;
-    bottom: 10px;
-    height: auto;
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    transition: all 0.3s ease-in-out;
-}
-
 #epnammma {
     font-size: 0.9rem;
     text-align: left;
@@ -205,6 +189,9 @@
     height: 33px;
     color: #ffdbc7b3;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
 .voteep {
@@ -284,7 +271,7 @@
 
 .numberep {
     position: absolute;
-    width: auto;
+    width: 2.5rem;
     height: 2.5rem;
     top: -10px;
     left: -10px;
@@ -294,7 +281,7 @@
     border: 1.5px solid #ffddc9;
     border-radius: 100px;
     color: #ffddc9;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

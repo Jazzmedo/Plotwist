@@ -3,13 +3,13 @@ import { SeasonContext } from '../context/SeasonContext'
 import { Link } from 'react-router-dom'
 
 function SeasPost() {
-    let { id, episodes, back, logo } = useContext(SeasonContext)
+    let { anime, id, episodes, back, logo } = useContext(SeasonContext)
     let [title, setTitle] = useState('')
     useEffect(() => {
         let x = back.name || episodes.name
 
         setTitle(manipulateString(x))
-    }, [back])
+    }, [back, anime])
 
     function manipulateString(str = "") {
         str = str.toLowerCase()
@@ -30,7 +30,7 @@ function SeasPost() {
         <>
             <div className="seasonpos">
                 <div className="posterrseas">
-                    {episodes.name == 'Specials' || episodes.season_number == 0 ? <></> : <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>}
+                    {episodes.name === 'Specials' || episodes.season_number === 0 ? <></> : <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>}
                     <img src={episodes.poster_path ? `https://image.tmdb.org/t/p/w500/${episodes.poster_path}` : `https://image.tmdb.org/t/p/w500/${back.poster_path}`} alt="" />
                 </div>
                 <div className="posseas">
@@ -41,17 +41,20 @@ function SeasPost() {
                 </div>
                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>
                 <div className="flexonlyy">
+                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}`}>
+                        <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
+                    </a> : <></>}
                     <a className='fgsdasd' href={back.name ? `https://ext.to/search/?q=${back.name.split(" ").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}` : '#'}>
-                        <img className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                        <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                     </a>
-                    <a className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}/season-${episodes.season_number}`}>
-                        <img style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}/season-${episodes.season_number}`}>
+                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
                     </a>
-                    <a className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
-                        <img className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
+                        <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
                     </a>
-                    <a className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
-                        <img className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
+                        <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
                     </a>
                 </div>
             </div>

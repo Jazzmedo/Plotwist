@@ -4,7 +4,7 @@ import { DetailsContext } from '../context/DetailsContextProvider'
 import './item.css'
 
 function Networks() {
-    let { id, type } = useContext(DetailsContext)
+    let { id, type, anime } = useContext(DetailsContext)
 
     let [title, setTitle] = useState('')
     let [data, setData] = useState([])
@@ -14,11 +14,11 @@ function Networks() {
         let x = data.name || data.title
 
         setTitle(manipulateString(x))
-        setRelease((data.release_date || data.first_air_date || "").slice(0,4))
-    }, [type, id, title, data, release])
+        setRelease((data.release_date || data.first_air_date || "").slice(0, 4))
+    }, [type, id, title, data, release,anime])
 
 
-    function manipulateString(str="",by="-") {
+    function manipulateString(str = "", by = "-") {
         str = str.toLowerCase()
         // Replace spaces with hyphens
         str = str.replace(/\s+/g, by);
@@ -45,13 +45,16 @@ function Networks() {
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
             <div className="flexonlyy" style={{ "gap": "1rem" }}>
-                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
+                {anime ? <a style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
+                    <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
+                </a> : <></>}
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
                     <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                 </a>
-                {type === 'movie' ? 
-                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-"+release : ""}`}>
-                    <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://yts.mx/assets/images/website/logo-YTS.svg`} />
-                </a> : <></>}
+                {type === 'movie' ?
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-" + release : ""}`}>
+                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://yts.mx/assets/images/website/logo-YTS.svg`} />
+                    </a> : <></>}
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
                     <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
                 </a>

@@ -17,6 +17,7 @@ function SeasDet() {
     let [cast, setCast] = useState([])
     let [logo, setLogo] = useState([])
     let [seasnum, setSeasnum] = useState([])
+    const [anime, setAnime] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
 
@@ -34,7 +35,7 @@ function SeasDet() {
         if (back.backdrop_path) {
             document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${back.backdrop_path}')`
         }
-            document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
+        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);
@@ -47,6 +48,14 @@ function SeasDet() {
         })
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(ress => {
             setBack(ress.data)
+            const isAnimation = ress.data.genres.some(genre => genre.name === "Animation");
+            const isJapaneseOrChinese = ["ja", "zh"].includes(ress.data.original_language);
+            if (isAnimation && isJapaneseOrChinese) {
+                setAnime(true);
+            }
+            else {
+                setAnime(false)
+            }
         })
         axios.get(`https://api.themoviedb.org/3/tv/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
             const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
@@ -66,7 +75,7 @@ function SeasDet() {
             <>
                 <Loading isLoading={isLoading} />
                 {!isLoading && <>
-                    <SeasonContext.Provider value={{ id, sid, episodes, setEpisodes, back, setBack, lengthh, setLength, cast, setCast, logo, seasnum }}>
+                    <SeasonContext.Provider value={{ anime, setAnime, id, sid, episodes, setEpisodes, back, setBack, lengthh, setLength, cast, setCast, logo, seasnum }}>
                         <div className="allseas">
                             <div className="seasondet">
                                 <SeasPost />

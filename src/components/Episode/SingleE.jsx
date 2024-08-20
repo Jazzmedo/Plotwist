@@ -15,6 +15,8 @@ function SingleE() {
     let [tv, setTv] = useState([])
     const [isLoading, setIsLoading] = useState(true);
     let [logo, setLogo] = useState("")
+    const [anime, setAnime] = useState(false);
+
 
 
 
@@ -30,6 +32,14 @@ function SingleE() {
         })
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(response => {
             setTv(response.data)
+            const isAnimation = response.data.genres.some(genre => genre.name === "Animation");
+            const isJapaneseOrChinese = ["ja", "zh"].includes(response.data.original_language);
+            if (isAnimation && isJapaneseOrChinese) {
+                setAnime(true);
+            }
+            else {
+                setAnime(false)
+            }
         })
         axios.get(`https://api.themoviedb.org/3/tv/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
             console.log(res.data.logos)
@@ -49,8 +59,8 @@ function SingleE() {
 
     return (
         <>
-            {console.log(episodes)}
-            {/* {console.log(tv)} */}
+            {/* {console.log(episodes)} */}
+            {console.log(tv)}
             <Loading isLoading={isLoading} />
             {!isLoading && <>
                 <EpisodeContext.Provider value={{ id, sid, eid, episodes, tv }}>
@@ -64,8 +74,12 @@ function SingleE() {
                                 <Link className='logogga' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '0rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
                                 <div className="flexonlyy">
+                                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
+                                        <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
+                                    </a> : <></>}
+
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
-                                        <img className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                                        <img alt="" className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                                     </a>
                                 </div>
                             </div>
@@ -73,7 +87,7 @@ function SingleE() {
                                 <h1 className='trendsss white more'>{episodes.name}</h1>
                                 <h3><span>Season : {episodes.season_number}</span>
                                     <span>Episode : {episodes.episode_number}</span>
-                                    <span>Duration : {episodes.runtime >= 60 ? `${parseInt(episodes.runtime / 60)}h` : ""} {episodes.runtime % 60 != 0 ? `${episodes.runtime % 60}m` : ""}</span>
+                                    <span>Duration : {episodes.runtime >= 60 ? `${parseInt(episodes.runtime / 60)}h` : ""} {episodes.runtime % 60 !== 0 ? `${episodes.runtime % 60}m` : ""}</span>
                                     <span>Air Date : {episodes.air_date}</span></h3>
                                 <p className='paragraph'>{episodes.overview}</p>
                             </div>
