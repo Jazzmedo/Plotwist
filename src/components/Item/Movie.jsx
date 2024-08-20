@@ -53,7 +53,7 @@ function Movie() {
             }
             // Check if genres include Animation and language is Japanese or Chinese
             const isAnimation = ress.data.genres.some(genre => genre.name === "Animation");
-            const isJapaneseOrChinese = ["ja", "zh"].includes(ress.data.original_language);
+            const isJapaneseOrChinese = ["ja", "zh","kr"].includes(ress.data.original_language);
             if (isAnimation && isJapaneseOrChinese) {
                 setAnime(true);
             }

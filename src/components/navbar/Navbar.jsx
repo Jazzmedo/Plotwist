@@ -68,7 +68,7 @@ function Navbar() {
     return (
         <>
             <nav id="Nv" className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link className="navbar-brand preventt" to="/Plotwist"><img src={require("../../logo/wlogo.png")} height="30" /></Link>
+                <Link className="navbar-brand preventt" to="/Plotwist"><img alt='' src={require("../../logo/wlogo.png")} height="30" /></Link>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item preventt">
                         <Link className="nav-link" to="/Plotwist">Home</Link>

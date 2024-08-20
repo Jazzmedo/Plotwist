@@ -49,7 +49,7 @@ function SeasDet() {
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(ress => {
             setBack(ress.data)
             const isAnimation = ress.data.genres.some(genre => genre.name === "Animation");
-            const isJapaneseOrChinese = ["ja", "zh"].includes(ress.data.original_language);
+            const isJapaneseOrChinese = ["ja", "zh","kr"].includes(ress.data.original_language);
             if (isAnimation && isJapaneseOrChinese) {
                 setAnime(true);
             }

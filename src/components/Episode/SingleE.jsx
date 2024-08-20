@@ -33,7 +33,7 @@ function SingleE() {
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(response => {
             setTv(response.data)
             const isAnimation = response.data.genres.some(genre => genre.name === "Animation");
-            const isJapaneseOrChinese = ["ja", "zh"].includes(response.data.original_language);
+            const isJapaneseOrChinese = ["ja", "zh","kr"].includes(response.data.original_language);
             if (isAnimation && isJapaneseOrChinese) {
                 setAnime(true);
             }

@@ -48,7 +48,7 @@ function Networks() {
                 {anime ? <a style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
                     <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                 </a> : <></>}
-                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
+                <a rel='noreferrer noopener' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
                     <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                 </a>
                 {type === 'movie' ?
