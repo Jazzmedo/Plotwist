@@ -8,16 +8,11 @@ function Details() {
     let [rate, setRate] = useState("")
     let { details, id, type, imdb, logo, setLogo } = useContext(DetailsContext)
 
-
-    useEffect(() => {
-        getRate()
-    }, [type, id, imdb])
-
     function getRate() {
-        axios.get(`https://api.themoviedb.org/3/${type}/${id}/${type == "movie" ? "release_dates" : "content_ratings"}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {
-            const rating = ress.data.results.find(element => element.iso_3166_1 == "US");
+        axios.get(`https://api.themoviedb.org/3/${type}/${id}/${type === "movie" ? "release_dates" : "content_ratings"}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((ress) => {
+            const rating = ress.data.results.find(element => element.iso_3166_1 === "US");
             if (rating) {
-                setRate(type == "movie" ? rating.release_dates[0].certification : rating.rating);
+                setRate(type === "movie" ? rating.release_dates[0].certification : rating.rating);
             }
         })
         axios.get(`https://api.themoviedb.org/3/${type}/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
@@ -30,6 +25,12 @@ function Details() {
             }
         });
     }
+
+    
+    useEffect(() => {
+        getRate()
+    }, [type, id, imdb])
+
     // console.log(logo)
     return (
         <div className="backonly">
@@ -38,12 +39,12 @@ function Details() {
 
                 <div className='extra'>
                     <span className='year'>
-                        {type == "movie" ? details.release_date && details.release_date.split("-")[0] : details.first_air_date && details.first_air_date.split("-")[0]}
+                        {type === "movie" ? details.release_date && details.release_date.split("-")[0] : details.first_air_date && details.first_air_date.split("-")[0]}
                     </span>
                     <span className='capitalize'>{details.original_language}</span>
                     {rate ? <span className='rate'>{rate}</span> : <></>}
                     <span>
-                        {type == "movie" ? details.runtime ? parseInt(details.runtime / 60) + "h " + details.runtime % 60 + "m" : "Runtime not available" : details.number_of_episodes + " Episodes"}
+                        {type === "movie" ? details.runtime>60 ? parseInt(details.runtime / 60) + "h " + (details.runtime % 60!==0? details.runtime % 60 + "m":"") : details.runtime + "m" : details.number_of_episodes + " Episodes"}
                     </span>
                 </div>
                 <div className="overview">{details.overview}</div>

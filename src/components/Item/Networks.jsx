@@ -45,21 +45,21 @@ function Networks() {
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
             <div className="flexonlyy" style={{ "gap": "1rem" }}>
-                <a className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}+${type == 'movie' ? release : ""}`}>
-                    <img className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
+                    <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                 </a>
-                {type == 'movie' ? 
-                <a className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type == 'movie' ? "-"+release : ""}`}>
-                    <img style={{ backgroundColor: '#000' }} className='netw' src={`https://yts.mx/assets/images/website/logo-YTS.svg`} />
+                {type === 'movie' ? 
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-"+release : ""}`}>
+                    <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://yts.mx/assets/images/website/logo-YTS.svg`} />
                 </a> : <></>}
-                <a className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
-                    <img className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
+                    <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
                 </a>
-                <a className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
-                    <img className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
+                    <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
                 </a>
-                <a className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}${type == 'movie' ? "-"+release : ""}`}>
-                    <img style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
+                <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/search/${data.name || data.title} ${type === 'movie' ? release : ""}`}>
+                    <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
                 </a>
             </div>
         </div>
