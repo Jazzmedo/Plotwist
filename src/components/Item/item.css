@@ -224,16 +224,19 @@
     }
 
     .posdet {
-        margin-right: 1rem;
+        margin-right: 0rem;
+        padding: 1rem;
+        border-right: 2px solid #ffddc9;
     }
 
     .posdet .posttle {
         font-family: "ADLaM Display", sans-serif;
         color: #ffddc9;
-        font-size: 20px;
+        font-size: 25px;
         padding-bottom: 10px;
         max-width: 200px;
         text-wrap: wrap;
+        text-align: end;
     }
 
     .vote {
