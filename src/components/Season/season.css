@@ -13,7 +13,8 @@
 .allseas {
     /* background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.50); */
-    margin: 2rem 0 0 0;
+    /* margin: 2rem 0 0 0; */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .seasonpos {
@@ -23,14 +24,14 @@
     align-items: center;
     justify-content: flex-start;
     margin: 1rem 0 1.5rem 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     width: fit-content;
     /* max-width: 30%; */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
     /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
     transition: all 0.3s ease-in-out;
 }
@@ -94,13 +95,13 @@
 
 .posseas {
     width: 250px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .seasname {
     color: #ffddc99d;
     transition: all 0.3s ease-in-out;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 .seasname:hover {
@@ -326,10 +327,10 @@
 
 .widthoo {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     padding-top: 20px;
     margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .casthh {

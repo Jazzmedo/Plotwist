@@ -161,12 +161,13 @@ a {
   justify-content: center;
   margin-top: 2rem;
   gap: 1rem;
-  filter: brightness(0.6);
+  filter: brightness(1);
   transition: all 0.3s ease-in-out;
   .line{
     width:20%;
     height: 3px;
-    background-color: #ffffff58;
+    background-color: #ffddc9;
+    border-radius: 5px;
   }
 }
 
