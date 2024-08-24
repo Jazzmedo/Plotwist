@@ -90,6 +90,7 @@ function Movie() {
                     <div className="alll">
                         <div className="flexonlyys">
                             <div className="grad"> </div>
+                            <div className="grad grad2"> </div>
                             <Details />
                             <Poster />
                         </div>
