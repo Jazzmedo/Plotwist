@@ -85,8 +85,9 @@ body {
 }
 
 #Nv {
-  background-color: rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding-bottom: 1rem;
+  /* box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.75); */
 
   img {
     margin-top: 0.3rem;

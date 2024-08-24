@@ -39,6 +39,9 @@ function Movie() {
                 setIsLoading(false)
             }, 1000);
         }
+        else{
+            setIsLoading(true)
+        }
         // console.log(cast)
         // console.log(details.genres)
         document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
