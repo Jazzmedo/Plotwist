@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { DetailsContext } from '../context/DetailsContextProvider'
 import './item.css'
 

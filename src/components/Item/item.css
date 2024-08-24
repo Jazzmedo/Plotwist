@@ -19,15 +19,31 @@
     margin: 0px 0 0px;
 }
 
+.grad {
+    position: absolute;
+    width: 800px;
+    height: 1000px;
+    top: -400px;
+    border-top-right-radius: 400px;
+    left: 0;
+    z-index: -1;
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 25%, rgba(242,242,242,0) 75%, rgba(255,255,255,0) 100%); */
+    transform: rotate(35deg);
+}
+
 .backonly {
     /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     border-bottom-right-radius: 150px 300px;
     /* border: 1px solid rgba(255, 255, 255, 0.18); */
     /* box-shadow: 20px 7px 20px 7px rgba(0, 0, 0, 0.5); */
     padding: 35px 20px 35px 40px;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    /* background: rgb(2, 0, 36);
+    background: linear-gradient(135deg, rgba(2, 0, 36, 0.5) 0%, rgba(0, 0, 0, 0.5) 54%, rgba(255, 255, 255, 0) 100%); */
+
 }
 
 /* .backonly:hover {
@@ -174,17 +190,18 @@
 } */
 
 .allpos {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px 30px 80px 50px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 40px 60px 80px 50px;
     width: fit-content;
     /* max-width: 30%; */
     /* padding: 20px; */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom-left-radius: 120px 270px;
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* border-bottom-left-radius: 120px 270px; */
     /* border: 1px solid rgba(255, 255, 255, 0.18); */
     /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
     transition: all 0.3s ease-in-out;
+    /* background-color: #00000000; */
 
     .flexmode {
         display: flex;
@@ -206,7 +223,7 @@
         font-size: 25px;
     }
 
-    .posdet{
+    .posdet {
         margin-right: 1rem;
     }
 
@@ -258,18 +275,17 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap:1rem
-
+    gap: 1rem
 }
 
-.fgsdasd{
+.fgsdasd {
     width: fit-content;
     height: fit-content;
     display: inline-block;
 }
 
-.nyaa{
-    background-image: url('https://i.imgur.com/0gVdwjP.png') ;
+.nyaa {
+    background-image: url('https://i.imgur.com/0gVdwjP.png');
 }
 
 .flexonlyys {
@@ -277,13 +293,14 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 
 .allcast {
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
     /* border-radius: 20px; */
     /* border-top: 1px solid rgba(255, 255, 255, 0.18); */
     /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
@@ -295,7 +312,7 @@
     justify-content: space-around;
     gap: 2rem;
     padding-bottom: 4rem;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 
     .casth {
         text-align: center;
@@ -432,7 +449,8 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.allcast .flexing{
+
+.allcast .flexing {
     display: flex;
 }
 
@@ -503,47 +521,76 @@
 
 /* Responsive adjustments for tablets */
 @media (max-width: 768px) {
-    .details img, .overview, .genress img {
-        width: 100%; /* Adjust image width for smaller screens */
+
+    .details img,
+    .overview,
+    .genress img {
+        width: 100%;
+        /* Adjust image width for smaller screens */
         height: auto;
     }
 
-    .details, .allpos, .backonly {
-        margin: 20px; /* Reduce margin */
-        padding: 10px; /* Adjust padding */
+    .details,
+    .allpos,
+    .backonly {
+        margin: 20px;
+        /* Reduce margin */
+        padding: 10px;
+        /* Adjust padding */
     }
 
-    .details .extra span, .details .rate {
-        font-size: 16px; /* Adjust font size */
+    .details .extra span,
+    .details .rate {
+        font-size: 16px;
+        /* Adjust font size */
     }
 
-    .genress, .allcast, .seasons {
-        flex-direction: column; /* Stack elements vertically */
+    .genress,
+    .allcast,
+    .seasons {
+        flex-direction: column;
+        /* Stack elements vertically */
         align-items: center;
     }
 }
 
 /* Responsive adjustments for mobile phones */
 @media (max-width: 480px) {
-    .details img, .overview, .genress img {
-        width: 100%; /* Ensure images take full width */
+
+    .details img,
+    .overview,
+    .genress img {
+        width: 100%;
+        /* Ensure images take full width */
     }
 
-    .details, .allpos, .backonly {
-        margin: 10px; /* Further reduce margin */
-        padding: 5px; /* Reduce padding */
+    .details,
+    .allpos,
+    .backonly {
+        margin: 10px;
+        /* Further reduce margin */
+        padding: 5px;
+        /* Reduce padding */
     }
 
-    .details .extra span, .details .rate {
-        font-size: 14px; /* Reduce font size for readability */
+    .details .extra span,
+    .details .rate {
+        font-size: 14px;
+        /* Reduce font size for readability */
     }
 
-    .genress, .allcast, .seasons {
-        flex-direction: column; /* Ensure vertical stacking */
+    .genress,
+    .allcast,
+    .seasons {
+        flex-direction: column;
+        /* Ensure vertical stacking */
         align-items: center;
     }
 
-    .details h2, .casth, .watchnow {
-        font-size: 18px; /* Adjust heading sizes for better readability */
+    .details h2,
+    .casth,
+    .watchnow {
+        font-size: 18px;
+        /* Adjust heading sizes for better readability */
     }
 }

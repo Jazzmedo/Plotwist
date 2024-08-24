@@ -89,6 +89,7 @@ function Movie() {
                 <DetailsContext.Provider value={{ details, id, type, imdb, logo, setLogo, cast, dir, sound, setCast, setDir, setSound, seasons, setSeason, last, setLast, similar, setSimilar,anime,setAnime }}>
                     <div className="alll">
                         <div className="flexonlyys">
+                            <div className="grad"> </div>
                             <Details />
                             <Poster />
                         </div>
