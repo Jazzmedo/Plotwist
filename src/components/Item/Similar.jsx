@@ -43,7 +43,7 @@ function Similar() {
                                         <div className="votinggg force another">{parseInt(seas.vote_average * 10)}%</div>
                                         <Link to={`/Plotwist/${type}/${seas.id}/`}>
                                             <img alt='' src={`https://image.tmdb.org/t/p/w500/${seas.poster_path}`} />
-                                            <h4 className='castname'>{seas.title || seas.name}</h4>
+                                            <h4 className='castname'>{seas.original_language==='ar'?seas.original_name||seas.original_title: seas.title || seas.name}</h4>
                                         </Link>
                                     </div>
                                     : <></>

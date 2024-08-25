@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Marhey:wght@300..700&display=swap');
 
 * {
     font-family: "ADLaM Display", sans-serif;
@@ -7,6 +8,14 @@
 *[lang="ar"] {
     direction: rtl !important;
     font-family: "Cairo", "sans-serif" !important;
+}
+
+.fontae {
+    font-family: 'Aref Ruqaa Ink', sans-serif;
+    font-weight: 700;
+    font-size: 90px;
+    margin-bottom: 1rem;
+    max-width: 500px;
 }
 
 .alll {
@@ -72,8 +81,9 @@
 
 
     img {
-        width: 450px;
+        width: fit-content;
         height: fit-content;
+        max-height: 215px;
     }
 
     .extra {

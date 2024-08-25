@@ -86,12 +86,13 @@ function Navbar() {
                         {results.length > 0 ? results.map(item =>
                             item ? (
                                 <>
-                                    <Link key={item.id} to={`/Plotwist/${item.media_type}/${item.id}`} className="dropdown-item">
+                                {/* {console.log(item.original_language)} */}
+                                    <Link style={{fontFamily: item.original_language === 'ar' ? "Cairo, sans-serif" : undefined }}  key={item.id} to={`/Plotwist/${item.media_type}/${item.id}`} className="dropdown-item">
                                         <span className='typee'>
                                             {item.media_type === 'person' ? <FontAwesomeIcon icon={faUser} /> :
                                                 item.media_type === 'tv' ? <FontAwesomeIcon icon={faTv} /> :
                                                     <FontAwesomeIcon icon={faFilm} />}
-                                        </span> : {item.title || item.name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
+                                        </span > : {item.original_language==='ar'||item.original_language==='es'?item.original_name||item.original_title: item.title || item.name} <span>{item.media_type === 'tv' ? (item.first_air_date ? `(${item.first_air_date.split("-")[0]})` : '') : (item.release_date ? `(${item.release_date.split("-")[0]})` : '')}</span>
                                     </Link>
                                 </>
                             ) : <></>) : <div>No results found</div>}

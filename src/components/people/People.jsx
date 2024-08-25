@@ -52,11 +52,11 @@ function People() {
                         </div>
                         <div className="pdetails">
                             <h1 className='trendsss trendssss' style={{ color: '#ffddc9' }}>{people.name}</h1>
-                            <h3><span>Known For : {people.known_for_department == "Sound" ? "Music Composer" : people.known_for_department == "Acting" ? "Actor" : "Director"}</span><span>Birthday : {people.birthday}</span><span>Place of Birth : {people.place_of_birth}</span></h3>
+                            <h3><span>Known For : {people.known_for_department === "Sound" ? "Music Composer" : people.known_for_department === "Acting" ? "Actor" : "Director"}</span><span>Birthday : {people.birthday}</span><span>Place of Birth : {people.place_of_birth}</span></h3>
                             <p className='paragraph' onClick={handleParagraphClick}>{people.biography}</p>
                             <div className="redirect">
-                                <a target='_blank' href={`https://www.themoviedb.org/person/${people.id}`}><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
-                                <a target='_blank' href={`https://www.imdb.com/name/${people.imdb_id}`}><img src="https://imgur.com/b1d2LOV.png" alt="" /></a>
+                                <a rel='noopener noreferrer' target='_blank' href={`https://www.themoviedb.org/person/${people.id}`}><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" alt="" /></a>
+                                <a rel='noopener noreferrer' target='_blank' href={`https://www.imdb.com/name/${people.imdb_id}`}><img src="https://imgur.com/b1d2LOV.png" alt="" /></a>
                             </div>
                         </div>
                     </div>

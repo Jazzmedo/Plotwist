@@ -16,7 +16,7 @@ function Details() {
             }
         })
         axios.get(`https://api.themoviedb.org/3/${type}/${id}/images?api_key=80db2c88f978a7c08fd8b402180ede6e`).then((res) => {
-            // console.log(res.data.logos)
+            console.log(res.data.logos)
             const firstLogo = res.data.logos.find(element => element.iso_639_1 === "ar") ||
                 res.data.logos.find(element => element.iso_639_1 === details.original_language) ||
                 res.data.logos[0];
@@ -38,7 +38,7 @@ function Details() {
     return (
         <div className="backonly">
             <div className='details'>
-                {logo ? <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" /> : <h1>{details.original_name || details.original_title}</h1>}
+                {logo ? <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" /> : <h1 className='fontae'>{details.original_name || details.original_title}</h1>}
 
                 <div className='extra'>
                     <span className='year'>

@@ -15,7 +15,7 @@ function KnownFor(people) {
     function getKnownFor(people) {
         axios.get(`https://api.themoviedb.org/3/person/${people.id}/combined_credits?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
             if (res && people.known) {
-                if (people.known == "Acting") {
+                if (people.known === "Acting") {
                     // Filter out characters named "Self" and movies with order smaller than 3
                     const filteredCast = res.data.cast.filter(item =>
                         !item.character.includes("Self") &&
@@ -46,11 +46,11 @@ function KnownFor(people) {
                         return (b.popularity * b.vote_average * b.vote_count) - (a.popularity * a.vote_average * a.vote_count);
                     }).slice(0, 10))
                 }
-                if (people.known == "Directing") {
-                    setCredits(res.data.crew.filter(item => item.job == "Director").sort((a, b) => b.popularity * b.vote_average * b.vote_count - a.popularity * a.vote_average * a.vote_count).slice(0, 10))
+                if (people.known === "Directing") {
+                    setCredits(res.data.crew.filter(item => item.job === "Director").sort((a, b) => b.popularity * b.vote_average * b.vote_count - a.popularity * a.vote_average * a.vote_count).slice(0, 10))
                 }
-                if (people.known == "Sound") {
-                    setCredits(res.data.crew.filter(item => item.job == "Original Music Composer").sort((a, b) => b.popularity * b.vote_average * b.vote_count - a.popularity * a.vote_average * a.vote_count).slice(0, 10))
+                if (people.known === "Sound") {
+                    setCredits(res.data.crew.filter(item => item.job === "Original Music Composer").sort((a, b) => b.popularity * b.vote_average * b.vote_count - a.popularity * a.vote_average * a.vote_count).slice(0, 10))
                 }
             }
         })
@@ -67,8 +67,8 @@ function KnownFor(people) {
                         <div key={credit.id} className='movcont'>
                             <div className="votinggg force another">{parseInt(credit.vote_average * 10)}%</div>
                             <img src={credit.poster_path !== null ? `https://image.tmdb.org/t/p/w500/${credit.poster_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
-                            <h4 className='movname'>{credit.original_title || credit.original_name}</h4>
-                            {people.known == "Acting" ? <h4 className='movchar'>{credit.character}</h4> : <></>}
+                            <h4 className='movname'>{credit.original_language==='ar'?credit.original_name||credit.original_title: credit.title || credit.name}</h4>
+                            {people.known === "Acting" ? <h4 className='movchar'>{credit.character}</h4> : <></>}
                         </div>
                     </Link>
                 )) : <></>}
