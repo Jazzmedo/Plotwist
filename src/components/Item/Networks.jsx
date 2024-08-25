@@ -26,6 +26,7 @@ function Networks() {
         str = str.replace(":", '');
         str = str.replace(",", '');
         str = str.replace(".", '');
+        str = str.replace("·", '');
 
         // Replace '&' with 'and'
         str = str.replace('&', 'and');
