@@ -358,6 +358,10 @@
     .castcont:hover {
         transform: scale(1.05);
 
+        h1 {
+            transform: scale(0.9523809524);
+        }
+
         img,
         .castname {
             filter: brightness(1);
@@ -388,6 +392,10 @@
         justify-content: flex-start;
         width: fit-content;
         flex-wrap: wrap;
+
+        h1 {
+            transition: all 0.3s ease-in-out;
+        }
 
         img {
             width: 100px;

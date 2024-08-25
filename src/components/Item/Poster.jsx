@@ -9,7 +9,7 @@ function Poster() {
     }, [type, id])
 
 
-    console.log(details)
+    // console.log(details)
     return (
         <>
             <div className="allpos">
