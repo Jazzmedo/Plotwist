@@ -165,7 +165,7 @@ a {
   transition: all 0.3s ease-in-out;
   .line{
     width:20%;
-    height: 3px;
+    height: 1px;
     background-color: #ffddc9;
     border-radius: 5px;
   }
