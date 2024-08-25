@@ -23,10 +23,13 @@ function Details() {
             if (firstLogo) {
                 setLogo(firstLogo.file_path);
             }
+            else {
+                setLogo(null)
+            }
         });
     }
 
-    
+
     useEffect(() => {
         getRate()
     }, [type, id, imdb])
@@ -35,7 +38,7 @@ function Details() {
     return (
         <div className="backonly">
             <div className='details'>
-                {logo ? <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" /> : <h2>{details.original_name || details.original_title}</h2>}
+                {logo ? <img src={`https://image.tmdb.org/t/p/w500/${logo}`} alt="" /> : <h1>{details.original_name || details.original_title}</h1>}
 
                 <div className='extra'>
                     <span className='year'>
@@ -44,7 +47,7 @@ function Details() {
                     <span className='capitalize'>{details.original_language}</span>
                     {rate ? <span className='rate'>{rate}</span> : <></>}
                     <span>
-                        {type === "movie" ? details.runtime>60 ? parseInt(details.runtime / 60) + "h " + (details.runtime % 60!==0? details.runtime % 60 + "m":"") : details.runtime + "m" : details.number_of_episodes + " Episodes"}
+                        {type === "movie" ? details.runtime > 60 ? parseInt(details.runtime / 60) + "h " + (details.runtime % 60 !== 0 ? details.runtime % 60 + "m" : "") : details.runtime + "m" : details.number_of_episodes + " Episodes"}
                     </span>
                 </div>
                 <div className="overview">{details.overview}</div>
