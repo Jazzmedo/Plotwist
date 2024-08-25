@@ -84,6 +84,7 @@
         width: fit-content;
         height: fit-content;
         max-height: 215px;
+        max-width: 500px;
     }
 
     .extra {
@@ -235,6 +236,7 @@
         align-items: center;
         justify-content: center;
         font-size: 25px;
+        margin-bottom: 15px;
     }
 
     .posdet {
