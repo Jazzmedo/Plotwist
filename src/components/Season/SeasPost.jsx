@@ -11,17 +11,23 @@ function SeasPost() {
         setTitle(manipulateString(x))
     }, [back, anime])
 
-    function manipulateString(str = "") {
+    function manipulateString(str = "", by = "-") {
         str = str.toLowerCase()
         // Replace spaces with hyphens
-        str = str.replace(/\s+/g, '-');
+        str = str.replace(/\s+/g, by);
         str = str.replace(":", '');
         str = str.replace(",", '');
+        str = str.replace(".", '');
+        str = str.replace("·", '');
+        str = str.replace("·", '');
+        str = str.replace("·", '');
 
         // Replace '&' with 'and'
         str = str.replace('&', 'and');
-        str = str.replace("--", '-');
-        str = str.replace("---", '-');
+        str = str.replace("--", by);
+        str = str.replace("---", by);
+        str = str.replace("----", by);
+        str = str.replace("·", '');
         return str;
     }
 
@@ -47,14 +53,14 @@ function SeasPost() {
                     <a className='fgsdasd' href={back.name ? `https://ext.to/search/?q=${back.name.split(" ").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}` : '#'}>
                         <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
                     </a>
-                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}/season-${episodes.season_number}`}>
-                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
-                    </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
                         <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
                     </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
                         <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
+                    </a>
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}/season-${episodes.season_number}`}>
+                        <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src={require('../../logo/ss.jpg')} />
                     </a>
                 </div>
             </div>

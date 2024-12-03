@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import { DetailsContext } from '../context/DetailsContextProvider'
 import './item.css'
 
@@ -27,11 +26,15 @@ function Networks() {
         str = str.replace(",", '');
         str = str.replace(".", '');
         str = str.replace("·", '');
-
+        str = str.replace("·", '');
+        str = str.replace("·", '');
+        
         // Replace '&' with 'and'
         str = str.replace('&', 'and');
         str = str.replace("--", by);
         str = str.replace("---", by);
+        str = str.replace("----", by);
+        str = str.replace("·", '');
         return str;
     }
     function getGenres() {
@@ -65,7 +68,7 @@ function Networks() {
                     <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
                 </a>
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/search/${data.name || data.title} ${type === 'movie' ? release : ""}`}>
-                    <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://subsource.net/static/media/logo_full_dark.5addecabd16c37b4c784.png`} />
+                    <img alt='' style={{ backgroundColor: '#fff', padding: '0px'}} className='netw' src={require('../../logo/ss.jpg')} />
                 </a>
             </div>
         </div>
