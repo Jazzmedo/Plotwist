@@ -55,7 +55,7 @@ function Networks() {
                     <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                 </a> : <></>}
                 <a rel='noreferrer noopener' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
-                    <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                    <img alt='' className='netw' src={require("../../logo/ext_logo.png")} />
                 </a>
                 {type === 'movie' ?
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-" + release : ""}`}>
