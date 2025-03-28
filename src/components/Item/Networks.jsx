@@ -51,7 +51,7 @@ function Networks() {
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
             <div className="flexonlyy" style={{ "gap": "1rem" }}>
-                {anime ? <a style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
+                {anime ? <a style={{ backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
                     <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                 </a> : <></>}
                 <a rel='noreferrer noopener' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
@@ -59,7 +59,7 @@ function Networks() {
                 </a>
                 {type === 'movie' ?
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-" + release : ""}`}>
-                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={`https://yts.mx/assets/images/website/logo-YTS.svg`} />
+                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={require("../../logo/logo-YTS.png")} />
                     </a> : <></>}
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
                     <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />

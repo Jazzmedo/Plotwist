@@ -74,12 +74,12 @@ function SingleE() {
                                 <Link className='logogga' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '0rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
                                 <div className="flexonlyy">
-                                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
+                                    {anime ? <a rel='noreferrer' style={{cursor:'pointer', backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
                                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                                     </a> : <></>}
 
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
-                                        <img alt="" className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                                        <img alt='' className='netw' src={require("../../logo/ext_logo.png")} />
                                     </a>
                                 </div>
                             </div>

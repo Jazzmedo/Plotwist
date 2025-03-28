@@ -47,11 +47,11 @@ function SeasPost() {
                 </div>
                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>
                 <div className="flexonlyy">
-                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('https://i.imgur.com/0gVdwjP.png')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}`}>
+                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}`}>
                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                     </a> : <></>}
                     <a className='fgsdasd' href={back.name ? `https://ext.to/search/?q=${back.name.split(" ").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}` : '#'}>
-                        <img alt='' className='netw' src={`https://ext.to/static/img/ext_logo.png`} />
+                        <img alt='' className='netw' src={require("../../logo/ext_logo.png")} />
                     </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
                         <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
