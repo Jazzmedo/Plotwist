@@ -24,7 +24,7 @@ function Navbar() {
     <nav id="Nv" className={`navbar`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/">
+          <Link to="/Plotwist">
             <img src={require('../../logo/wlogo.png')} alt="Plotwist" />
           </Link>
         </div>
