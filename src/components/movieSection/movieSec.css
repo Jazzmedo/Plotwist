@@ -2,9 +2,13 @@
     width: 100%;
     padding-bottom: 1rem;
     margin-top: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
 
     .trendssss.trendsss{
         color: #ffddc9;
+        font-size: 2rem;
+        margin-left: 10px;
     }
 }
 .topratedd{
@@ -13,4 +17,52 @@
     align-items: flex-start;
     justify-content: center;
     gap: 3rem;
+}
+
+/* Responsive styles for movie section */
+@media (max-width: 1200px) {
+    .topratedd {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .moviesecc .trendssss.trendsss {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .topratedd {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .moviesecc {
+        margin-top: 20px;
+    }
+    
+    .moviesecc .trendssss.trendsss {
+        font-size: 1.5rem;
+    }
+    
+    .topratedd {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .moviesecc {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    
+    .moviesecc .trendssss.trendsss {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .topratedd {
+        gap: 0.8rem;
+    }
 }

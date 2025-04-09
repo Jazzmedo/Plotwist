@@ -283,3 +283,272 @@
         color: #ffddc9;
     }
 }
+
+
+/* Add these classes to your existing epi.css file */
+
+.responsive-container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.watch-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 10px;
+}
+
+/* Add these responsive styles to the end of your epi.css file */
+
+/* Responsive styles for Episode component */
+@media (max-width: 1200px) {
+    .epidet {
+        margin: 2rem 0;
+    }
+    
+    .epiposter {
+        width: 30%;
+    }
+    
+    .epipdetails {
+        max-width: 65%;
+    }
+    
+    .epipdetails h1 {
+        font-size: 2rem;
+    }
+    
+    .epipdetails h3 {
+        font-size: 1.1rem;
+        margin-left: 2rem;
+    }
+    
+    .paragraph {
+        max-height: 200px;
+        margin-left: 2rem;
+    }
+    
+    .redirect {
+        margin-left: 2rem;
+        font-size: 1.8vw;
+    }
+    
+    .movcont img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 991px) {
+    .epidet {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .epiposter {
+        width: 50%;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .epiposter .flexonlyy {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .epiposter .flexonlyy .netw {
+        width: 55px;
+    }
+    
+    .epipdetails {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .epipdetails h1 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+    
+    .epipdetails h3 {
+        margin-left: 0;
+        justify-content: center;
+    }
+    
+    .paragraph {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .redirect {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .allmov {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .epidet {
+        margin: 1.5rem 0;
+    }
+    
+    .epiposter {
+        width: 70%;
+    }
+    
+    .epiposter .votinggg.force {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    .epipdetails h1 {
+        font-size: 1.8rem;
+    }
+    
+    .epipdetails h3 {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+    
+    .epipdetails h3 span {
+        padding-left: 1rem;
+    }
+    
+    .redirect {
+        font-size: 16px;
+    }
+    
+    .redirect img {
+        height: 25px;
+        width: 45px;
+        padding: 5px;
+    }
+    
+    .movcont img {
+        width: 80px;
+    }
+    
+    .movname {
+        font-size: 12px;
+        max-width: 80px;
+    }
+    
+    .movchar {
+        font-size: 10px;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .epidet {
+        margin: 1rem 0;
+    }
+    
+    .epiposter {
+        width: 85%;
+    }
+    
+    .epiposter .votinggg.force {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+        top: -10px;
+        right: -10px;
+    }
+    
+    .epiposter .flexonlyy .netw {
+        width: 45px;
+    }
+    
+    .epipdetails h1 {
+        font-size: 1.5rem;
+    }
+    
+    .epipdetails h3 {
+        font-size: 0.9rem;
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .epipdetails h3 span {
+        padding-left: 0;
+        border-left: none;
+        text-align: center;
+    }
+    
+    .paragraph {
+        max-height: 150px;
+        font-size: 0.9rem;
+    }
+    
+    .redirect {
+        gap: 0.5rem;
+    }
+    
+    .redirect img {
+        height: 20px;
+        width: 40px;
+        padding: 4px;
+    }
+    
+    .allmov {
+        gap: 1rem;
+    }
+    
+    .movcont {
+        margin-top: 10px;
+    }
+    
+    .movcont img {
+        width: 70px;
+    }
+    
+    .movname {
+        font-size: 11px;
+        max-width: 70px;
+    }
+    
+    .movchar {
+        font-size: 9px;
+        max-width: 70px;
+    }
+    
+    .trendsss.white.more {
+        font-size: 1.5rem;
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .votinggg.force {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    .fgsdasd {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .votinggg.force {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+        top: -10px;
+        right: -10px;
+    }
+    
+    .testtt {
+        width: 45px !important;
+        height: 20px !important;
+    }
+}

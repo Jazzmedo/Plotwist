@@ -1,0 +1,200 @@
+/* OnCard component styles */
+.oncarddd {
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.oncarddd:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 3px #00000082;
+}
+
+.posterrrr {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.numberepp {
+    position: absolute;
+    width: 70px;
+    bottom: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.voteepp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffddc9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.episdetss {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.septerr {
+    width: 1px;
+    align-self: center;
+    height: 50px;
+    background-color: hwb(21 78% 0% / 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.nameeeee {
+    font-size: 13px;
+    font-weight: bold;
+    max-width: 160px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 1.4;
+    color: rgba(255, 221, 201, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.detsdetss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    transition: all 0.3s ease-in-out;
+    gap: 0.25rem;
+}
+
+.detsdetss * {
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.oncarddd:hover .posterrrr {
+    filter: blur(0px);
+}
+
+.oncarddd:hover .septerr {
+    background-color: #ffddc9;
+}
+
+.oncarddd:hover .numberepp {
+    filter: brightness(1);
+    box-shadow: 0 0 2px 2px #00000082;
+}
+
+.oncarddd:hover .voteepp {
+    background-color: #006671;
+}
+
+.oncarddd:hover .episdetss {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.oncarddd:hover .nameeeee {
+    color: #ffddc9;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .oncarddd {
+        width: 280px;
+    }
+}
+
+@media (max-width: 991px) {
+    .oncarddd {
+        width: 240px;
+    }
+    
+    .nameeeee {
+        font-size: 12px;
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .oncarddd {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    
+    .septerr {
+        height: 40px;
+    }
+    
+    .nameeeee {
+        font-size: 11px;
+        max-width: 120px;
+        height: 40px;
+    }
+    
+    .numberepp {
+        width: 60px;
+    }
+    
+    .episdetss {
+        gap: 10px;
+        padding: 8px;
+    }
+    
+    .spacer-mobile {
+        width: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .oncarddd {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .nameeeee {
+        font-size: 12px;
+        max-width: 100%;
+    }
+    
+    .year-display {
+        font-size: 10px;
+    }
+    
+    .voteepp {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    .episdetss {
+        padding: 5px;
+    }
+}

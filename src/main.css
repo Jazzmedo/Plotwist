@@ -85,7 +85,7 @@ body {
 }
 
 #Nv {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.506) !important;
   padding-bottom: 1rem;
   /* box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.75); */
 
@@ -214,11 +214,10 @@ a {
   }
 
   .sepssa {
-    flex-direction: column; /* Stack elements vertically on small screens */
     gap: 0.5rem;
   }
 
   .sepssa .line {
-    width: 80%; /* Full width lines for narrow screens */
+    width: 30%; /* Full width lines for narrow screens */
   }
 }

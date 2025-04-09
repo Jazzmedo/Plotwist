@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { SeasonContext } from '../context/SeasonContext'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { SeasonContext } from '../context/SeasonContext'
 
 function SeasPost() {
     let { anime, id, episodes, back, logo } = useContext(SeasonContext)
@@ -9,7 +9,7 @@ function SeasPost() {
         let x = back.name || episodes.name
 
         setTitle(manipulateString(x))
-    }, [back, anime])
+    }, [back, anime, episodes.name])
 
     function manipulateString(str = "", by = "-") {
         str = str.toLowerCase()
@@ -31,7 +31,6 @@ function SeasPost() {
         return str;
     }
 
-    console.log(episodes)
     return (
         <>
             <div className="seasonpos">
@@ -40,13 +39,15 @@ function SeasPost() {
                     <img src={episodes.poster_path ? `https://image.tmdb.org/t/p/w500/${episodes.poster_path}` : `https://image.tmdb.org/t/p/w500/${back.poster_path}`} alt="" />
                 </div>
                 <div className="posseas">
-                    <Link className='preventt' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
+                    <Link className='preventt' to={`/Plotwist/tv/${id}`}>
+                        <img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} alt="" />
+                    </Link>
                     <div className="seasvote">
                         <h3 className='seasname'>{episodes.name}</h3>
                     </div>
                 </div>
                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>
-                <div className="flexonlyy">
+                <div className="flexonlyy watch-links">
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/details/tv/${id}`}>
                         <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://hexa.watch/hexa-logo.png' />
                     </a>

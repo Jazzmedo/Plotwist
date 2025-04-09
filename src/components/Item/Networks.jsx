@@ -50,7 +50,7 @@ function Networks() {
     // console.log(data)
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
-            <div className="flexonlyy forceFive" style={{ "gap": "1rem" }}>
+            <div className="flexonlyy forceFive" style={{ "gap": "1rem", flexDirection: 'row' }}>
             {type === 'movie' ?
                     <>
                         <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/watch/movie/${id}`}>

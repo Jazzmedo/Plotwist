@@ -6,6 +6,7 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     position: sticky;
+    z-index: 1000;
 }
 
 .loading-content {
@@ -55,4 +56,28 @@
 .fade-exit-active {
     opacity: 0;
     transition: opacity 300ms ease-in;
+}
+
+/* Responsive adjustments for loading screen */
+@media (max-width: 768px) {
+    .custom-spinner {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .loading-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-spinner {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .loading-text {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
 }

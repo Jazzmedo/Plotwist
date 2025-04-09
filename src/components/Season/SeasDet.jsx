@@ -20,8 +20,6 @@ function SeasDet() {
     const [anime, setAnime] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
-
-
     useEffect(() => {
         document.getElementById("Nv").scrollIntoView({ behavior: "smooth" });
         getData()
@@ -35,11 +33,30 @@ function SeasDet() {
         if (back.backdrop_path) {
             document.body.style.cssText = `background-image:url('https://image.tmdb.org/t/p/original/${back.backdrop_path}')`
         }
-        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;"
+        
+        // Make footer responsive
+        const updateFooterStyle = () => {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                if (window.innerWidth <= 768) {
+                    footer.style.cssText = "box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.5);margin-top: 20px;";
+                } else {
+                    footer.style.cssText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);margin-top: 0px;";
+                }
+            }
+        };
+        
+        updateFooterStyle();
+        window.addEventListener('resize', updateFooterStyle);
+        
         setTimeout(() => {
             setIsLoading(false)
         }, 1000);
-    }, [back.name, episodes.name, seasnum])
+        
+        return () => {
+            window.removeEventListener('resize', updateFooterStyle);
+        };
+    }, [back.name, episodes.name, seasnum, back.backdrop_path])
 
     function getData() {
         axios.get(`https://api.themoviedb.org/3/tv/${id}/season/${sid}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(res => {
@@ -76,7 +93,7 @@ function SeasDet() {
                 <Loading isLoading={isLoading} />
                 {!isLoading && <>
                     <SeasonContext.Provider value={{ anime, setAnime, id, sid, episodes, setEpisodes, back, setBack, lengthh, setLength, cast, setCast, logo, seasnum }}>
-                        <div className="allseas">
+                        <div className="allseas responsive-container">
                             <div className="seasondet">
                                 <SeasPost />
                                 <div className="sep"> </div>

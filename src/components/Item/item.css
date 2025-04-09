@@ -42,7 +42,6 @@
 
 .grad.grad2 {
     background: linear-gradient(225deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 20%, rgba(242, 242, 242, 0) 42%, rgba(245, 245, 245, 0) 65%, rgba(247, 247, 247, 0) 85%, rgba(255, 255, 255, 0) 100%);
-
 }
 
 .backonly {
@@ -242,7 +241,6 @@
     .posdet {
         margin-right: 0rem;
         padding: 1rem;
-        border-right: 2px solid #ffddc9;
     }
 
     .posdet .posttle {
@@ -554,78 +552,337 @@
     flex-direction: column;
 }
 
-/* Responsive adjustments for tablets */
-@media (max-width: 768px) {
-
-    .details img,
-    .overview,
-    .genress img {
-        width: 100%;
-        /* Adjust image width for smaller screens */
-        height: auto;
+/* Responsive styles for Item component */
+@media (max-width: 1200px) {
+    .allpos {
+        max-width: 400px;
+        padding: 30px 40px 60px 40px;
     }
-
-    .details,
-    .allpos,
-    .backonly {
-        margin: 20px;
-        /* Reduce margin */
-        padding: 10px;
-        /* Adjust padding */
+    
+    .details img {
+        max-width: 400px;
     }
-
-    .details .extra span,
-    .details .rate {
-        font-size: 16px;
-        /* Adjust font size */
+    
+    .fontae {
+        font-size: 70px;
     }
-
-    .genress,
-    .allcast,
+    
+    .allcast .casth {
+        font-size: 35px;
+    }
+    
     .seasons {
-        flex-direction: column;
-        /* Stack elements vertically */
-        align-items: center;
+        gap: 2rem;
     }
 }
 
-/* Responsive adjustments for mobile phones */
-@media (max-width: 480px) {
-
-    .details img,
-    .overview,
-    .genress img {
-        width: 100%;
-        /* Ensure images take full width */
+@media (max-width: 991px) {
+    .alll {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .details,
-    .allpos,
+    
+    .allpos {
+        max-width: 100%;
+        width: 90%;
+        padding: 20px 30px 40px 30px;
+    }
+    
     .backonly {
-        margin: 10px;
-        /* Further reduce margin */
-        padding: 5px;
-        /* Reduce padding */
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    
+    .details {
+        width: 100%;
+    }
+    
+    .details img {
+        max-width: 350px;
+    }
+    
+    .fontae {
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .flexmode {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    
+    .posdet {
+        border-right: none;
+        border-top: 2px solid #ffddc9;
+        margin-right: 0;
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .posdet .posttle {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .vote {
+        text-align: center;
+    }
+    
+    .posterr {
+        margin-right: 0;
+        width: 200px;
+    }
+    
+    .allcast {
+        padding-bottom: 2rem;
+    }
+    
+    .allcast .casth {
+        font-size: 30px;
+    }
+    
+    .seasons {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .flexonlyy.forceFive {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .flexonlyys{
+        flex-direction: column;
     }
 
+    .grad {
+        top: -150px;
+    }
+    
+    .allpos {
+        margin: 1rem auto;
+        padding: 15px 20px 30px 20px;
+    }
+    
+    .backonly {
+        padding: 20px 15px 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .details img {
+        max-width: 300px;
+    }
+    
+    .details .extra {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .details .extra span {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+    
+    .overview {
+        font-size: 14px;
+    }
+    
+    .genress {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .genree {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .watchnow {
+        font-size: 22px;
+    }
+    
+    .allcast .casth {
+        font-size: 28px;
+    }
+    
+    .castcont img {
+        width: 90px;
+    }
+    
+    .castcont .castname, .castcont .castchar {
+        font-size: 12px;
+        max-width: 90px;
+    }
+    
+    .seasons {
+        gap: 1rem;
+    }
+    
+    .crew.must.obey img {
+        width: 90px;
+    }
+    
+    .votinggg.force {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grad {
+        top: -100px;
+    }
+    
+    .fontae {
+        font-size: 40px;
+    }
+    
+    .allpos {
+        width: 95%;
+        padding: 10px 15px 20px 15px;
+    }
+    
+    .backonly {
+        width: 95%;
+        padding: 15px 10px;
+        border-radius: 10px;
+    }
+    
+    .details img {
+        max-width: 250px;
+    }
+    
+    .details .extra span {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+    
+    .details .rate {
+        margin: 0 10px;
+    }
+    
+    .overview {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    
+    .genree {
+        font-size: 11px;
+        padding: 5px;
+    }
+    
+    .watchnow {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    .posdet .posttle {
+        font-size: 20px;
+        margin: auto auto 2vh;
+        text-align: center !important;
+    }
+    
+    .vote {
+        text-align: center !important;
+    }
+    
+    .vote span {
+        font-size: 14px;
+    }
+    
+    .posterr {
+        width: 150px;
+    }
+    
+    .allcast .casth {
+        font-size: 24px;
+    }
+    
+    .allcast {
+        gap: 1rem;
+    }
+    
+    .castcont {
+        margin-top: 10px;
+    }
+    
+    .castcont img {
+        width: 80px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .castcont .castname, .castcont .castchar {
+        font-size: 11px;
+        max-width: 80px;
+        margin-top: 5px;
+    }
+    
+    .seasons {
+        gap: 0.8rem;
+        padding: 0 0.5rem;
+    }
+    
+    .oneseason {
+        gap: 1.5rem;
+    }
+    
+    .crew.must.obey {
+        margin: 5px;
+    }
+    
+    .crew.must.obey img {
+        width: 80px;
+    }
+    
+    .votinggg.force {
+        font-size: 10px;
+        padding: 2px 5px;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .flexonlyy {
+        gap: 0.5rem !important;
+    }
+    
+    .netw {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Fix for existing media queries that might conflict */
+@media (max-width: 768px) {
     .details .extra span,
     .details .rate {
-        font-size: 14px;
-        /* Reduce font size for readability */
+        font-size: 16px;
     }
-
+    
     .genress,
     .allcast,
     .seasons {
-        flex-direction: column;
-        /* Ensure vertical stacking */
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
     }
+}
 
+@media (max-width: 480px) {
+    .details .extra span,
+    .details .rate {
+        font-size: 14px;
+    }
+    
+    .genress,
+    .allcast,
+    .seasons {
+        flex-direction: row;
+    }
+    
     .details h2,
     .casth,
     .watchnow {
-        font-size: 18px;
-        /* Adjust heading sizes for better readability */
+        font-size: inherit;
     }
 }

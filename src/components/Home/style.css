@@ -378,20 +378,43 @@
 }
 
 @media (max-width: 480px) { /* Mobile devices */
+    .conn {
+        height: 30vh;
+    }
+
     .conn .logo, .conn h3, .conn h4, .conn p {
-        font-size: 6vw; /* Further increase font size for very small screens */
+        font-size: 5vw; /* Further increase font size for very small screens */
+    }
+
+    .conn:hover h3 {
+        font-size: 5vw;
     }
 
     .genres {
         width: 100%; /* Full width genre container */
+        top: 82%;
     }
 
     .oncarddd {
-        flex-direction: row; /* Change layout for better use of space */
-        justify-content: space-between;
+        width: 100%; /* Full width cards on mobile */
+        max-width: 100%;
     }
 
-    .posterrrr, .numberep, .voteepp {
-        display: none; /* Hide elements to simplify the view */
+    .episdetss {
+        padding: 5px;
+    }
+
+    .nameeeee {
+        font-size: 12px;
+        max-width: 140px;
+    }
+
+    .septerr {
+        height: 40px;
+    }
+
+    .voteepp {
+        font-size: 12px;
+        padding: 3px 6px;
     }
 }

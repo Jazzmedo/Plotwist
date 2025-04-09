@@ -5,6 +5,7 @@ import NowPlaying from "./NowPlaying"
 import { HomeContext } from '../context/HomeContext'
 import axios from 'axios'
 import Loading from '../Loading/Loading'
+import './responsive.css' // Add this import for additional responsive styles
 
 function Home() {
     let [data, setData] = useState([])
@@ -23,7 +24,25 @@ function Home() {
             })
         })
         getTodos()
-        document.querySelector('footer').style.cssText = "box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.5);margin-top: 80px;"
+        
+        // Make footer responsive
+        const updateFooterStyle = () => {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                if (window.innerWidth <= 768) {
+                    footer.style.cssText = "box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.5);margin-top: 40px;";
+                } else {
+                    footer.style.cssText = "box-shadow: 0px 0px 40px 30px rgba(0, 0, 0, 0.5);margin-top: 80px;";
+                }
+            }
+        };
+        
+        updateFooterStyle();
+        window.addEventListener('resize', updateFooterStyle);
+        
+        return () => {
+            window.removeEventListener('resize', updateFooterStyle);
+        };
     }, [])
 
     function shuffle(array) {
@@ -69,13 +88,15 @@ function Home() {
         <>
             <Loading isLoading={isLoading} />
             {!isLoading && <>
-                <HomeContext.Provider value={{ data, setData, dataa, setDataa, dataaa, setDataaa, period, movie, tv }}>
-                    <Trending />
-                    <Separator />
-                    <NowPlaying data={movie} type="movie" query="now_playing" />
-                    <Separator />
-                    <NowPlaying data={tv} type="tv" query="on_the_air" />
-                </HomeContext.Provider>
+                <div className="responsive-container">
+                    <HomeContext.Provider value={{ data, setData, dataa, setDataa, dataaa, setDataaa, period, movie, tv }}>
+                        <Trending />
+                        <Separator />
+                        <NowPlaying data={movie} type="movie" query="now_playing" />
+                        <Separator />
+                        <NowPlaying data={tv} type="tv" query="on_the_air" />
+                    </HomeContext.Provider>
+                </div>
             </>}
         </>
     )
