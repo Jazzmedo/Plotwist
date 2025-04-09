@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Plotwist/static/css/main.f814063d.css",
-    "main.js": "/Plotwist/static/js/main.5e35ae40.js",
+    "main.css": "/Plotwist/static/css/main.5c4e4a84.css",
+    "main.js": "/Plotwist/static/js/main.fa98a6d3.js",
     "static/media/pxfuel.jpg": "/Plotwist/static/media/pxfuel.97d6c3e139d05651b472.jpg",
     "static/media/back.jpg": "/Plotwist/static/media/back.ba5e868e979894ae457e.jpg",
     "static/media/logo512.png": "/Plotwist/static/media/logo512.8cd61a99aefff834d7e0.png",
@@ -11,11 +11,11 @@
     "static/media/wlogo.png": "/Plotwist/static/media/wlogo.1d8e79de37ca81cd2013.png",
     "static/media/asdfs.jpg": "/Plotwist/static/media/asdfs.c9e1bd67786aff347b94.jpg",
     "index.html": "/Plotwist/index.html",
-    "main.f814063d.css.map": "/Plotwist/static/css/main.f814063d.css.map",
-    "main.5e35ae40.js.map": "/Plotwist/static/js/main.5e35ae40.js.map"
+    "main.5c4e4a84.css.map": "/Plotwist/static/css/main.5c4e4a84.css.map",
+    "main.fa98a6d3.js.map": "/Plotwist/static/js/main.fa98a6d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.f814063d.css",
-    "static/js/main.5e35ae40.js"
+    "static/css/main.5c4e4a84.css",
+    "static/js/main.fa98a6d3.js"
   ]
 }
