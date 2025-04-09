@@ -33,7 +33,7 @@ function SingleE() {
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=80db2c88f978a7c08fd8b402180ede6e`).then(response => {
             setTv(response.data)
             const isAnimation = response.data.genres.some(genre => genre.name === "Animation");
-            const isJapaneseOrChinese = ["ja", "zh","kr"].includes(response.data.original_language);
+            const isJapaneseOrChinese = ["ja", "zh", "kr"].includes(response.data.original_language);
             if (isAnimation && isJapaneseOrChinese) {
                 setAnime(true);
             }
@@ -74,7 +74,22 @@ function SingleE() {
                                 <Link className='logogga' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '0rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Watch Now</h2>
                                 <div className="flexonlyy">
-                                    {anime ? <a rel='noreferrer' style={{cursor:'pointer', backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
+                                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/watch/tv/${id}/${episodes.season_number}/${episodes.episode_number}`}>
+                                        <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://hexa.watch/hexa-logo.png' />
+                                    </a>
+                                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://vidbox.to/watch/tv/${id}?season=${episodes.season_number}&episode=${episodes.episode_number}`}>
+                                        <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://vidbox.to/logo.png' />
+                                    </a>
+                                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://www.cineby.app/tv/${id}`}>
+                                        <img alt='' style={{ backgroundColor: '#000', padding: '10px', width: '45px' }} className='netw' src='https://www.cineby.app/logo.png' />
+                                    </a>
+                                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://watch.vidora.su/watch/tv/${id}/${episodes.season_number}/${episodes.episode_number}`}>
+                                        <img alt='' style={{ backgroundColor: '#000', padding: '5px', width: '45px' }} className='netw' src='https://watch.vidora.su/favicon.svg' />
+                                    </a>
+                                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/watch/${id}/${episodes.season_number}/${episodes.episode_number}`}>
+                                        <img alt='' style={{ backgroundColor: '#fff', padding: '0' }} className='netw' src='https://xprime.tv/logo.webp' />
+                                    </a>
+                                    {anime ? <a rel='noreferrer' style={{ cursor: 'pointer', backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
                                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                                     </a> : <></>}
 

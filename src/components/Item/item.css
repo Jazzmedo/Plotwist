@@ -208,7 +208,7 @@
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 40px 60px 80px 50px;
     width: fit-content;
-    /* max-width: 30%; */
+    max-width: 470px;
     /* padding: 20px; */
     /* backdrop-filter: blur(10px); */
     /* -webkit-backdrop-filter: blur(10px); */
@@ -297,10 +297,13 @@
     gap: 1rem
 }
 
+
+
 .fgsdasd {
     width: fit-content;
     height: fit-content;
     display: inline-block;
+
 }
 
 .nyaa {

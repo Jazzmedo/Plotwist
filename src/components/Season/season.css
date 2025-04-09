@@ -23,11 +23,11 @@
 
     align-items: center;
     justify-content: flex-start;
-    margin: 1rem 0 1.5rem 3rem;
+    margin: 1rem 0 1.5rem 1rem;
     /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     width: fit-content;
-    /* max-width: 30%; */
+    max-width: 400px;
     /* backdrop-filter: blur(10px); */
     /* -webkit-backdrop-filter: blur(10px); */
     border-radius: 20px;

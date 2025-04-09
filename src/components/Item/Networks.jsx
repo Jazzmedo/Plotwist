@@ -15,7 +15,7 @@ function Networks() {
 
         setTitle(manipulateString(x))
         setRelease((data.release_date || data.first_air_date || "").slice(0, 4))
-    }, [type, id, title, data, release,anime])
+    }, [type, id, title, data, release, anime])
 
 
     function manipulateString(str = "", by = "-") {
@@ -28,7 +28,7 @@ function Networks() {
         str = str.replace("·", '');
         str = str.replace("·", '');
         str = str.replace("·", '');
-        
+
         // Replace '&' with 'and'
         str = str.replace('&', 'and');
         str = str.replace("--", by);
@@ -50,17 +50,51 @@ function Networks() {
     // console.log(data)
     return (
         <div className='flexonlyy' style={{ "gap": "1rem" }}>
-            <div className="flexonlyy" style={{ "gap": "1rem" }}>
+            <div className="flexonlyy forceFive" style={{ "gap": "1rem" }}>
+            {type === 'movie' ?
+                    <>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/watch/movie/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://hexa.watch/hexa-logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://vidbox.to/watch/movie/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://vidbox.to/logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://www.cineby.app/movie/${id}?play=true`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '10px', width: '45px' }} className='netw' src='https://www.cineby.app/logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://watch.vidora.su/watch/movie/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '5px', width: '45px' }} className='netw' src='https://watch.vidora.su/favicon.svg' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/watch/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#fff' , padding: '0'}} className='netw' src='https://xprime.tv/logo.webp' />
+                        </a>
+                    </>
+
+                    :
+                    <>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/details/tv/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://hexa.watch/hexa-logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://vidbox.to/tv/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://vidbox.to/logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://www.cineby.app/tv/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '10px', width: '45px' }} className='netw' src='https://www.cineby.app/logo.png' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://watch.vidora.su/detail/tv/${id}`}>
+                            <img alt='' style={{ backgroundColor: '#000', padding: '5px', width: '45px' }} className='netw' src='https://watch.vidora.su/favicon.svg' />
+                        </a>
+                        <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/title/t${id}`}>
+                            <img alt='' style={{ backgroundColor: '#fff', padding: '0' }} className='netw' src='https://xprime.tv/logo.webp' />
+                        </a>
+                    </>
+                }
                 {anime ? <a style={{ backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
                     <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                 </a> : <></>}
                 <a rel='noreferrer noopener' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
                     <img alt='' className='netw' src={require("../../logo/ext_logo.png")} />
                 </a>
-                {type === 'movie' ?
-                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://yts.mx/movies/${title}${type === 'movie' ? "-" + release : ""}`}>
-                        <img alt='' style={{ backgroundColor: '#000' }} className='netw' src={require("../../logo/logo-YTS.png")} />
-                    </a> : <></>}
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
                     <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
                 </a>
@@ -68,7 +102,7 @@ function Networks() {
                     <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
                 </a>
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/search/${data.name || data.title} ${type === 'movie' ? release : ""}`}>
-                    <img alt='' style={{ backgroundColor: '#fff', padding: '0px'}} className='netw' src={require('../../logo/ss.jpg')} />
+                    <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src={require('../../logo/ss.jpg')} />
                 </a>
             </div>
         </div>

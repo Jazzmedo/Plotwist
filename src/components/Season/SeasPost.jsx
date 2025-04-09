@@ -47,6 +47,21 @@ function SeasPost() {
                 </div>
                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', borderTop: '1px solid #fff', paddingTop: '10px' }}>Watch Now</h2>
                 <div className="flexonlyy">
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/details/tv/${id}`}>
+                        <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://hexa.watch/hexa-logo.png' />
+                    </a>
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://vidbox.to/tv/${id}`}>
+                        <img alt='' style={{ backgroundColor: '#000', padding: '15px' }} className='netw' src='https://vidbox.to/logo.png' />
+                    </a>
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://www.cineby.app/tv/${id}`}>
+                        <img alt='' style={{ backgroundColor: '#000', padding: '10px', width: '45px' }} className='netw' src='https://www.cineby.app/logo.png' />
+                    </a>
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://watch.vidora.su/detail/tv/${id}`}>
+                        <img alt='' style={{ backgroundColor: '#000', padding: '5px', width: '45px' }} className='netw' src='https://watch.vidora.su/favicon.svg' />
+                    </a>
+                    <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/title/t${id}`}>
+                        <img alt='' style={{ backgroundColor: '#fff', padding: '0' }} className='netw' src='https://xprime.tv/logo.webp' />
+                    </a>
                     {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+S${+episodes.season_number < 10 ? "0" + episodes.season_number : episodes.season_number}`}>
                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                     </a> : <></>}
