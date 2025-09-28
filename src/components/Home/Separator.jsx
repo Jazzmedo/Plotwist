@@ -4,7 +4,7 @@ function Separator() {
     return (
         <div className="sepssa">
             <div className="line"></div>
-            <div className="circlee"><img src='/src/logo512.png' alt="" width={50} /></div>
+            <div className="circlee"><img src='/Plotwist/logo512.png' alt="" width={50} /></div>
             <div className="line"> </div>
         </div>
     )

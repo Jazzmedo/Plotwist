@@ -6,7 +6,7 @@ import './loading.css'
 function Loading({ isLoading }) {
     const nodeRef = useRef(null);
     useEffect(() => {
-        document.body.style.backgroundImage = `url("/src/back.jpg")`;
+        document.body.style.backgroundImage = `url("/Plotwist/back.jpg")`;
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center';
         

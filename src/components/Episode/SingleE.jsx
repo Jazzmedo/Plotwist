@@ -87,12 +87,12 @@ function SingleE() {
                                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/watch/${id}/${episodes.season_number}/${episodes.episode_number}`}>
                                         <img alt='' style={{ backgroundColor: '#fff', padding: '0' }} className='netw' src='https://xprime.tv/logo.webp' />
                                     </a>
-                                    {anime ? <a rel='noreferrer' style={{ cursor: 'pointer', backgroundImage: url('/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
+                                    {anime ? <a rel='noreferrer' style={{ cursor: 'pointer', backgroundImage: url('/Plotwist/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
                                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                                     </a> : <></>}
 
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
-                                        <img alt='' className='netw' src="/logo/ext_logo.png" />
+                                        <img alt='' className='netw' src="/Plotwist/logo/ext_logo.png" />
                                     </a>
                                 </div>
                             </div>

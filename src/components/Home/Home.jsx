@@ -81,7 +81,7 @@ function Home() {
         }, 500)
     }
 
-    document.body.style.cssText = `background-image:url('back.jpg')`
+    document.body.style.cssText = `background-image:url('Plotwist/back.jpg')`
     // console.log(movie)
 
     return (
