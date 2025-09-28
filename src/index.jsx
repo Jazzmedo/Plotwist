@@ -11,59 +11,22 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import People from './components/people/People';
 import MovieSec from './components/movieSection/MovieSec';
 
-
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-        children: [
-            {
-                path: "/",
-                element: <Home />
-            }
-        ]
-    },
-    {
-        path: "/Plotwist",
-        element: <App />,
-        children: [
-            {
-                path: "/Plotwist/:type/:id",
-                element: <Movie />
-            },
-            {
-                path: "/Plotwist/Movies",
-                element: <MovieSec type={"movie"} />
-            },
-            {
-                path: "/Plotwist/",
-                element: <Home />
-            },
-            {
-                path: "/Plotwist/TV",
-                element: <MovieSec type={"tv"} />
-            },
-            {
-                path: "/Plotwist/tv/:id/:sid",
-                element: <SeasDet />
-            },
-            {
-                path: "/Plotwist/tv/:id/:sid/:eid",
-                element: <SingleE />
-            },
-            {
-                path: "/Plotwist/person/:pid",
-                element: <People />
-            },
-            {
-                path: "/Plotwist/*",
-                element: <NotFound />
-            },
-        ],
-    },
-])
+  {
+    path: "/Plotwist",
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },            // /Plotwist
+      { path: "Movies", element: <MovieSec type="movie" /> },  // /Plotwist/Movies
+      { path: "TV", element: <MovieSec type="tv" /> },         // /Plotwist/TV
+      { path: ":type/:id", element: <Movie /> },               // /Plotwist/movie/1035259
+      { path: "tv/:id/:sid", element: <SeasDet /> },           // /Plotwist/tv/123/2
+      { path: "tv/:id/:sid/:eid", element: <SingleE /> },      // /Plotwist/tv/123/2/5
+      { path: "person/:pid", element: <People /> },            // /Plotwist/person/456
+      { path: "*", element: <NotFound /> }                     // Catch-all 404
+    ],
+  },
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <RouterProvider router={router} />
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={router} />);
