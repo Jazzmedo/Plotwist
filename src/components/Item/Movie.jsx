@@ -81,7 +81,7 @@ function Movie() {
 
 
     // console.log(details.backdrop_path)
-    document.title = `Plotwist | ${details.title || details.name} ${type === 'movie' ? "("+(details.release_date ? details.release_date.split("-")[0] : "Unknown Year")+")" : ""}`;
+    document.title = `${details.title || details.name} ${type === 'movie' ? "("+(details.release_date ? details.release_date.split("-")[0] : "Unknown Year")+")" : ""}`;
 
     return (
         <>

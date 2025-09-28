@@ -25,7 +25,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/Plotwist">
-            <img src='/src/logo/wlogo.png' alt="Plotwist" />
+            <img src='/logo/wlogo.png' alt="Plotwist" />
           </Link>
         </div>
 
