@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
-import { DetailsContext } from '../context/DetailsContextProvider'
+import { DetailsContext } from '/src/components/context/DetailsContextProvider'
 
 function Genres() {
     let {id,type,imdb} = useContext(DetailsContext)

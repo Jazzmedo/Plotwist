@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Trending from "./Trending"
 import Separator from "./Separator"
 import NowPlaying from "./NowPlaying"
-import { HomeContext } from '../context/HomeContext'
+import { HomeContext } from '/src/components/context/HomeContext'
 import axios from 'axios'
-import Loading from '../Loading/Loading'
+import Loading from '/src/components/Loading/Loading'
 import './responsive.css' // Add this import for additional responsive styles
 
 function Home() {
@@ -81,7 +81,7 @@ function Home() {
         }, 500)
     }
 
-    document.body.style.cssText = `background-image:url('${require("../../back.jpg")}')`
+    document.body.style.cssText = `background-image:url('/src/back.jpg')`
     // console.log(movie)
 
     return (

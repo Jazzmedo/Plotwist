@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { SeasonContext } from '../context/SeasonContext'
-import Separator from '../Home/Separator'
+import { SeasonContext } from '/src/components/context/SeasonContext'
+import Separator from '/src/components/Home/Separator'
 
 function SeasCast() {
 

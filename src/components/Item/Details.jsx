@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { DetailsContext } from '../context/DetailsContextProvider'
+import { DetailsContext } from '/src/components/context/DetailsContextProvider'
 import "./item.css"
 import axios from 'axios'
 import Genres from './Genres'

@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import EpiPost from './EpiPost'
 import EpiCast from './EpiCast'
-import Loading from '../Loading/Loading'
+import Separator from '/src/components/Home/Separator'
+import Loading from '/src/components/Loading/Loading'
 import './epi.css'
-import '../Item/item.css'
-import { EpiContext } from '../context/EpiContext'
+import '/src/components/Item/item.css'
+import { EpiContext } from '/src/components/context/EpiContext'
 
 function EpiDet() {
     let { id, sid, eid } = useParams()
@@ -78,7 +79,9 @@ function EpiDet() {
                                         {episode.overview}
                                     </div>
                                 </div>
+                                    <Separator/>
                             </div>
+                            <h1>hi</h1>
                             <EpiCast />
                         </div>
                     </EpiContext.Provider>

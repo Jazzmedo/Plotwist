@@ -4,10 +4,10 @@ import axios from 'axios'
 import SeasPost from './SeasPost'
 import SeasCast from './SeasCast'
 import Episode from './SeasEpis'
-import Loading from '../Loading/Loading'
+import Loading from '/src/components/Loading/Loading'
 import './season.css'
-import '../Item/item.css'
-import { SeasonContext } from '../context/SeasonContext'
+import '/src/components/Item/item.css'
+import { SeasonContext } from '/src/components/context/SeasonContext'
 
 function SeasDet() {
     let { id, sid } = useParams()

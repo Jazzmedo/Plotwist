@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react'
-import { DetailsContext } from '../context/DetailsContextProvider'
+import { DetailsContext } from '/src/components/context/DetailsContextProvider'
 import Networks from './Networks'
 
 function Poster() {
@@ -24,7 +24,7 @@ function Poster() {
                     <img className='posterr' src={details.poster_path ? `https://image.tmdb.org/t/p/w500/${details.poster_path}` : `https://imgur.com/IqNlhr9.jpeg`} alt="" />
                 </div>
 
-                <><h2 className='watchnow'>Watch Now</h2> <Networks /></>
+                <><h2 className='watchnow'>Download Now</h2> <Networks /></>
             </div>
 
         </>

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../Home/style.css';
-import '../../main.css';
+import '/src/components/Home/style.css';
+import '/src/main.css';
 import './navbar.css';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -25,7 +25,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/Plotwist">
-            <img src={require('../../logo/wlogo.png')} alt="Plotwist" />
+            <img src='/src/logo/wlogo.png' alt="Plotwist" />
           </Link>
         </div>
 

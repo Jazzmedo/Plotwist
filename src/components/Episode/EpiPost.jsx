@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { EpiContext } from '../context/EpiContext'
+import { EpiContext } from '/src/components/context/EpiContext'
 
 function EpiPost() {
     let { anime, id, sid, eid, episode, back, logo } = useContext(EpiContext)
@@ -21,7 +21,7 @@ function EpiPost() {
             <div className="epiposter">
                 <div className="conss">
                     <div className="votinggg force">{parseInt(episode.vote_average * 10)}%</div>
-                    <img className='epiimg' src={episode.still_path ? `https://image.tmdb.org/t/p/w500/${episode.still_path}` : require(`./asdfs.jpg`)} alt="" />
+                    <img className='epiimg' src={episode.still_path ? `https://image.tmdb.org/t/p/w500/${episode.still_path}` : '/src/components/Season/asdfs.jpg'} alt="" />
                 </div>
                 <div className="logogga">
                     <Link className='preventt' to={`/Plotwist/tv/${id}`}>
@@ -29,20 +29,20 @@ function EpiPost() {
                     </Link>
                 </div>
                 <div className="flexonlyy watch-links">
-                    {anime ? <a rel='noreferrer' style={{ backgroundImage: `url('${require('../../logo/nyaa.png')}')`, padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${+episode.episode_number < 10 ? "0" + episode.episode_number : episode.episode_number}`}>
+                    {anime ? <a rel='noreferrer' style={{ backgroundImage: url('/src/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${+episode.episode_number < 10 ? "0" + episode.episode_number : episode.episode_number}`}>
                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                     </a> : <></>}
                     <a className='fgsdasd' href={back.name ? `https://ext.to/search/?q=${back.name.split(" ").join("+")}+S${+episode.season_number < 10 ? "0" + episode.season_number : episode.season_number}E${+episode.episode_number < 10 ? "0" + episode.episode_number : episode.episode_number}` : '#'}>
-                        <img alt='' className='netw' src={require("../../logo/ext_logo.png")} />
+                        <img alt='' className='netw' src="/src/logo/ext_logo.png" />
                     </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
-                        <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/pahe.png')} />
+                        <img alt='' className='netw' style={{ padding: '0px' }} src='/.src/logo/pahe.png' />
                     </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
-                        <img alt='' className='netw' style={{ padding: '0px' }} src={require('../../logo/psa.png')} />
+                        <img alt='' className='netw' style={{ padding: '0px' }} src='/src/logo/psa.png' />
                     </a>
                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/subtitles/${title}/season-${episode.season_number}/episode-${episode.episode_number}`}>
-                        <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src={require('../../logo/ss.jpg')} />
+                        <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src='/src/logo/ss.jpg' />
                     </a>
                 </div>
             </div>

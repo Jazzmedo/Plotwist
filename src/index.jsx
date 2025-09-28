@@ -1,7 +1,7 @@
 import React from 'react';
 import Movie from "./components/Item/Movie"
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.jsx';
 import { Link } from 'react-router-dom';
 import NotFound from './components/notfound/NotFound';
 import SeasDet from './components/Season/SeasDet';
@@ -44,11 +44,11 @@ const router = createBrowserRouter([
                 element: <MovieSec type={"tv"} />
             },
             {
-                path: "/Plotwist/tv/:id/season/:sid",
+                path: "/Plotwist/tv/:id/:sid",
                 element: <SeasDet />
             },
             {
-                path: "/Plotwist/tv/:id/season/:sid/episode/:eid",
+                path: "/Plotwist/tv/:id/:sid/:eid",
                 element: <SingleE />
             },
             {

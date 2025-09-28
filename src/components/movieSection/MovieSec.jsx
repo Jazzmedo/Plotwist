@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import OnCard from './OnCard'
 import axios from 'axios'
-import Loading from '../Loading/Loading'
-import Separator from '../Home/Separator'
+import Loading from '/src/components/Loading/Loading'
+import Separator from '/src/components/Home/Separator'
 import './movieSec.css'
 
 function MovieSec(type) {

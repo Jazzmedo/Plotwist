@@ -2,10 +2,11 @@ import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Details from './Details'
-import Loading from '../Loading/Loading'
+import Loading from '/src/components/Loading/Loading'
 import Poster from './Poster'
 import Cast from './Cast'
-import { DetailsContext } from '../context/DetailsContextProvider'
+import Player from './Player'
+import { DetailsContext } from '/src/components/context/DetailsContextProvider'
 
 function Movie() {
 
@@ -94,6 +95,8 @@ function Movie() {
                             <Details />
                             <Poster />
                         </div>
+                        
+                        {type === "movie"? <Player tp='movie' sid='' eid='' id={id}  />:<></>}
                         <Cast data={details} id={id} type={type} />
                     </div>
                 </DetailsContext.Provider>

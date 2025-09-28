@@ -1,0 +1,13 @@
+.playercontainer {
+  width: 85%;
+  margin: auto;
+  /* background-color: #00000080; */
+
+}
+
+.player {
+  width: 100%;
+  margin-top: 20px;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #ffddc9;
+}

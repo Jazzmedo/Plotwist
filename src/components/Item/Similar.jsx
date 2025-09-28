@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { DetailsContext } from '../context/DetailsContextProvider'
+import { DetailsContext } from '/src/components/context/DetailsContextProvider'
 
 function Similar() {
     let { type, id, similar, setSimilar } = useContext(DetailsContext)

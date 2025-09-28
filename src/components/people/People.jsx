@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import Loading from '../Loading/Loading';
+import Loading from '/src/components/Loading/Loading';
 import KnownFor from './KnownFor';
 import './people.css';
 
@@ -36,7 +36,7 @@ function People() {
         }
     };
 
-    document.body.style.cssText = `background-image:url('${require('../../back.jpg')}')`
+    document.body.style.cssText = `background-image:url('/src/back.jpg')`
     document.title = `Plotwist | ${people.title || people.name}`;
 
     // console.log(people.known_for_department)

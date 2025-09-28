@@ -2,7 +2,7 @@ import React from 'react'
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import TrendingData from './TrendingData';
-import { HomeContext } from '../context/HomeContext';
+import { HomeContext } from '/src/components/context/HomeContext';
 
 
 

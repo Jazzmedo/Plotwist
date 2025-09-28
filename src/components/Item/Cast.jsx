@@ -2,9 +2,9 @@ import React, { useEffect, useState,useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Seasons from './Seasons'
-import Separator from '../Home/Separator'
+import Separator from '/src/components/Home/Separator'
 import Similar from './Similar'
-import {DetailsContext} from '../context/DetailsContextProvider.jsx'
+import {DetailsContext} from '/src/components/context/DetailsContextProvider.jsx'
 
 
 function Cast() {

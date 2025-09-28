@@ -13,7 +13,7 @@ function OnCard(ele) {
                     ele.movies.map(item => {
                         return (
                             <Link className="oncarddd" key={item.id} to={`/Plotwist/${ele.type}/${item.id}`}>
-                                <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : require(`../Season/asdfs.jpg`)} alt={item.name || item.title} />
+                                <img className="posterrrr" src={item.backdrop_path ? `https://image.tmdb.org/t/p/w500/${item.backdrop_path}` : '/src/components/Season/asdfs.jpg'} alt={item.name || item.title} />
                                 <div className="voteepp">{parseInt(item.vote_average * 10)}%</div>
                                 <div className="episdetss">
                                     <img className='numberepp' src={item.poster_path ? `https://image.tmdb.org/t/p/w500/${item.poster_path}` : `https://imgur.com/IqNlhr9.jpeg`} alt="Poster" />

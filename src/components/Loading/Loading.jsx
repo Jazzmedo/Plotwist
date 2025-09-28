@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect , useRef } from 'react'
 import { CSSTransition } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './loading.css'
 
 function Loading({ isLoading }) {
+    const nodeRef = useRef(null);
     useEffect(() => {
-        document.body.style.backgroundImage = `url(${require("../../back.jpg")})`;
+        document.body.style.backgroundImage = `url("/src/back.jpg")`;
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center';
         
@@ -22,6 +23,7 @@ function Loading({ isLoading }) {
             timeout={300}
             classNames="fade"
             unmountOnExit
+            nodeRef={nodeRef}
         >
             <div className="loading-container">
                 <div className="loading-content">

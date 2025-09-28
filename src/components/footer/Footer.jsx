@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import Separator from '../Home/Separator'
+import Separator from '/src/components/Home/Separator'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -14,7 +14,7 @@ function Footer() {
 
             <div className="foot">
                 <div className="foot1">
-                    <img src={require("../../logo/wlogo.png")} alt="" />
+                    <img src='/src/logo/wlogo.png' alt="" />
                 </div>
                 <div className="foot2">
                     <h3>COMPANY</h3>
