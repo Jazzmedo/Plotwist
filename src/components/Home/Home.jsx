@@ -81,7 +81,7 @@ function Home() {
         }, 500)
     }
 
-    document.body.style.cssText = `background-image:url('https://raw.githubusercontent.com/Jazzmedo/Plotwist/refs/heads/master/src/back.jpg')`
+    document.body.style.cssText = `background-image:url('back.jpg')`
     // console.log(movie)
 
     return (
