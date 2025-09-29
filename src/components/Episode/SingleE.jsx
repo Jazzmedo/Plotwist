@@ -17,7 +17,7 @@ function SingleE() {
     const [isLoading, setIsLoading] = useState(true);
     let [logo, setLogo] = useState("")
     const [anime, setAnime] = useState(false);
-
+    const [baseUrl, setBaseUrl] = useState('https://vidfast.pro');
 
 
 
@@ -105,7 +105,11 @@ function SingleE() {
                                 <p className='paragraph'>{episodes.overview}</p>
                                 <div className='playercontainer'>
                                     <Separator/>
-                                    <iframe className='player' src={`https://vidfast.pro/tv/${id}/${sid}/${eid}`} frameBorder="0" allow="encrypted-media fullscreen" allowFullScreen></iframe>
+                                    <div className="player-buttons">
+                                        <button id='player1' onClick={() => setBaseUrl('https://vidfast.pro')}>VidFast</button>
+                                        <button id='player1' onClick={() => setBaseUrl('https://player.videasy.net')}>VidEasy</button>
+                                    </div>
+                                    <iframe className='player' src={`${baseUrl}/tv/${id}/${sid}/${eid}`} frameBorder="0" allow="encrypted-media fullscreen" allowFullScreen></iframe>
                                 </div>
                             </div>
                         </div>

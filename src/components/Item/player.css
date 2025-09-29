@@ -10,4 +10,29 @@
   margin-top: 20px;
   aspect-ratio: 16 / 9;
   border: 2px solid #ffddc9;
+  box-shadow: 0 0 40px 20px #00000080;
+}
+
+.player-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 40;
+}
+.player-buttons button {
+  background-color: #ffddc9;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.player-buttons button:hover {
+  background-color: #e6c7b3;
 }
