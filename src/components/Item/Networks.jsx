@@ -83,20 +83,20 @@ function Networks() {
                         </a>
                     </>
                 }
-                {anime ? <a style={{ backgroundImage: url('/Plotwist/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
+                {anime ? <a style={{ backgroundImage: url('/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} rel='noreferrer' className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${title.split("-").join("+")}+${type === 'movie' ? release : ""}`}>
                     <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                 </a> : <></>}
                 <a rel='noreferrer noopener' className='fgsdasd' target='_blank' href={`https://ext.to/search/?q=${title.split("-").join("+")}${type === 'movie' ? "+" + release : ""}`}>
-                    <img alt='' className='netw' src="/Plotwist/logo/ext_logo.png" />
+                    <img alt='' className='netw' src="/logo/ext_logo.png" />
                 </a>
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://pahe.ink/?s=${title.split("-").join("+")}`}>
-                    <img alt='' className='netw' style={{ padding: '0px' }} src='/.src/Plotwist/logo/pahe.png' />
+                    <img alt='' className='netw' style={{ padding: '0px' }} src='/.src/logo/pahe.png' />
                 </a>
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://psa.wf/?s=${title.split("-").join("+")}`}>
-                    <img alt='' className='netw' style={{ padding: '0px' }} src='/Plotwist/logo/psa.png' />
+                    <img alt='' className='netw' style={{ padding: '0px' }} src='/logo/psa.png' />
                 </a>
                 <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://subsource.net/search/${data.name || data.title} ${type === 'movie' ? release : ""}`}>
-                    <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src='/Plotwist/logo/ss.jpg' />
+                    <img alt='' style={{ backgroundColor: '#fff', padding: '0px' }} className='netw' src='/logo/ss.jpg' />
                 </a>
             </div>
         </div>

@@ -72,7 +72,7 @@ function SingleE() {
                                     <img className='epiimg' src={`https://image.tmdb.org/t/p/w500/${episodes.still_path}`} alt="" />
                                     <div className="votinggg force">{parseInt(episodes.vote_average * 10)}%</div>
                                 </div>
-                                <Link className='logogga' to={`/Plotwist/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
+                                <Link className='logogga' to={`/tv/${id}`}><img className='seasposttle' src={`https://image.tmdb.org/t/p/w300/${logo}`} width={250} alt="" /></Link>
                                 <h2 className='trendsss trendssss' style={{ fontSize: '2rem', marginTop: '0rem', borderTop: '1px solid #ffddc9', paddingTop: '10px' }}>Download Now</h2>
                                 <div className="flexonlyy">
                                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://hexa.watch/watch/tv/${id}/${episodes.season_number}/${episodes.episode_number}`}>
@@ -87,12 +87,12 @@ function SingleE() {
                                     <a rel='noreferrer' className='fgsdasd' target='_blank' href={`https://xprime.tv/watch/${id}/${episodes.season_number}/${episodes.episode_number}`}>
                                         <img alt='' style={{ backgroundColor: '#fff', padding: '0' }} className='netw' src='https://xprime.tv/logo.webp' />
                                     </a>
-                                    {anime ? <a rel='noreferrer' style={{ cursor: 'pointer', backgroundImage: url('/Plotwist/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
+                                    {anime ? <a rel='noreferrer' style={{ cursor: 'pointer', backgroundImage: url('/logo/nyaa.png'), padding: '5px', borderRadius: '10px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} className='fgsdasd nyaa' target='_blank' href={`https://nyaa.si/?q=${tv.name.split("-").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+episodes.episode_number < 100 ? "00" + eid : eid}`}>
                                         <div className="testtt" style={{ width: '55px', height: '25px', color: 'white' }}></div>
                                     </a> : <></>}
 
                                     <a className='fgsdasd' href={tv.name ? `https://ext.to/search/?q=${tv.name.split(" ").join("+")}+S${+sid < 10 ? "0" + sid : sid}+E${+eid < 10 ? "0" + eid : eid}` : '#'}>
-                                        <img alt='' className='netw' src="/Plotwist/logo/ext_logo.png" />
+                                        <img alt='' className='netw' src="/logo/ext_logo.png" />
                                     </a>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ function SingleE() {
                         <h1 className='trendsss trendssss'>Cast</h1>
                         <div className="allcastingg">
                             {episodes.guest_stars ? episodes.guest_stars.slice(0, 10).map((ele) => {
-                                return <Link key={ele.id} to={`/Plotwist/person/${ele.id}`}>
+                                return <Link key={ele.id} to={`/person/${ele.id}`}>
                                     <div key={ele.id} className='castcontt'> <img src={ele.profile_path !== null ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} alt="" />
                                         <h4 className='castnamee'>{ele.name}</h4>
                                         <h4 className='castcharr'>{ele.character}</h4>

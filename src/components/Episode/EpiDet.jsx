@@ -50,7 +50,7 @@ function EpiDet() {
         
         return () => {
             window.removeEventListener('resize', updateFooterStyle);
-            document.body.style.cssText = `background-image:url('/Plotwist/back.jpg')`
+            document.body.style.cssText = `background-image:url('/back.jpg')`
         };
     }, [back.name, episode.name, back.backdrop_path, id, sid, eid])
 

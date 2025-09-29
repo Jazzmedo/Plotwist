@@ -35,7 +35,7 @@ function SeasCast() {
                         <h1 className='trendssss trendsss'>Cast</h1>
                         <div className="allcastingg">
                             {cast.cast.slice(0, 10).map((ele) => (
-                                <Link key={ele.id} to={`/Plotwist/person/${ele.id}`}>
+                                <Link key={ele.id} to={`/person/${ele.id}`}>
                                     <div className='castcontt'>
                                         <img 
                                             src={ele.profile_path ? `https://image.tmdb.org/t/p/w500/${ele.profile_path}` : `https://upload.wikimedia.org/wikipedia/commons/a/a2/Person_Image_Placeholder.png`} 

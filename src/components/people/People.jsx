@@ -36,7 +36,7 @@ function People() {
         }
     };
 
-    document.body.style.cssText = `background-image:url('/Plotwist/back.jpg')`
+    document.body.style.cssText = `background-image:url('/back.jpg')`
     document.title = `Plotwist | ${people.title || people.name}`;
 
     // console.log(people.known_for_department)

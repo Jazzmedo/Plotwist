@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.1.2",
   "type": "module",
-  "homepage": "https://jazzmedo.github.io/Plotwist",
+  "homepage": "https://plotwist.pages.dev/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

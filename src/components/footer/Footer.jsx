@@ -14,19 +14,19 @@ function Footer() {
 
             <div className="foot">
                 <div className="foot1">
-                    <img src='/Plotwist/logo/wlogo.png' alt="" />
+                    <img src='/logo/wlogo.png' alt="" />
                 </div>
                 <div className="foot2">
                     <h3>COMPANY</h3>
                     <ul>
                         <li>
-                            <Link to="/Plotwist">Home</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/Plotwist/Movies">Movies</Link>
+                            <Link to="/Movies">Movies</Link>
                         </li>
                         <li>
-                            <Link to="/Plotwist/TV">TV Shows</Link>
+                            <Link to="/TV">TV Shows</Link>
                         </li>
                     </ul>
                 </div>

@@ -27,7 +27,7 @@ function TrendingData({ ele, genre }) {
 
     return (
         <div className="conn clicked" itemType={ele.media_type} id={ele.id} style={backgroundStyle}>
-            <Link className='preventt' to={`/Plotwist/${ele.media_type}/${ele.id}`}>
+            <Link className='preventt' to={`/${ele.media_type}/${ele.id}`}>
                 <div className="backblack"></div>
                 <div className="backblack1"></div>
                 <img className='logo' src={`https://image.tmdb.org/t/p/w300/${logo}`} alt="" />

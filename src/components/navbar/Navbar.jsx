@@ -24,8 +24,8 @@ function Navbar() {
     <nav id="Nv" className={`navbar`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/Plotwist">
-            <img src='/Plotwist/logo/wlogo.png' alt="Plotwist" />
+          <Link to="/">
+            <img src='/logo/wlogo.png' alt="Plotwist" />
           </Link>
         </div>
 
@@ -44,17 +44,17 @@ function Navbar() {
         <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <ul>
             <li>
-              <Link to="/Plotwist" className={location.pathname === '/Plotwist' ? 'active' : ''}>
+              <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/Plotwist/Movies" className={location.pathname === '/Plotwist/Movies' ? 'active' : ''}>
+              <Link to="/Movies" className={location.pathname === '/Movies' ? 'active' : ''}>
                 Movies
               </Link>
             </li>
             <li>
-              <Link to="/Plotwist/TV" className={location.pathname === '/Plotwist/TV' ? 'active' : ''}>
+              <Link to="/TV" className={location.pathname === '/TV' ? 'active' : ''}>
                 TV Shows
               </Link>
             </li>

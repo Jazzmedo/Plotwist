@@ -17,7 +17,7 @@ function Seasons() {
                                 {seasons.map((seas) => {
                                     return (seas.season_number <= last.season_number ?
                                         <div key={seas.id} className='castcont crew must obey'>
-                                            <Link className='preventt' to={`/Plotwist/tv/${id}/${seas.season_number}`}>
+                                            <Link className='preventt' to={`/tv/${id}/${seas.season_number}`}>
                                                 <div className="votinggg force another">{parseInt(seas.vote_average * 10)}%</div>
                                                 {/* {console.log(seas.season_number)} */}
                                                 <img src={seas.poster_path !== null ? `https://image.tmdb.org/t/p/w500/${seas.poster_path}` : details.poster_path ? `https://image.tmdb.org/t/p/w500/${details.poster_path}` : `https://imgur.com/IqNlhr9.jpeg`} alt={`Season ${seas.season_number} Poster`} />

@@ -88,7 +88,7 @@ function Search() {
           searchResults.map((result) => (
             <Link
               key={`${result.media_type}-${result.id}`}
-              to={`/Plotwist/${result.media_type}/${result.id}`}
+              to={`/${result.media_type}/${result.id}`}
               className="search-item"
               onClick={handleResultClick}
             >
